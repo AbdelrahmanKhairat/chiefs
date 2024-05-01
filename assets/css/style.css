@@ -128,6 +128,13 @@ a:hover {
   transition: all 1s ease-out; }
   .og-hf .my-nav {
     padding: 0px; }
+    .box {
+      width: 800px;
+      height: 1000px;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+    }
 
 .menu-toggle {
   display: none;
