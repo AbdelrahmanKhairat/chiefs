@@ -45,13 +45,14 @@ a:hover {
 
 /* ================================ Header CSS =============================== */
 .my-nav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   padding: 10px 0px;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999; }
+  z-index: 999;
+   }
   .my-nav .nav-items {
     display: flex;
     flex-wrap: wrap;
@@ -275,7 +276,7 @@ a:hover {
 .bg-02 {
   padding: 50px 0px;
   position: relative;
-  background: #fff;
+  background: #eef6ff;
   z-index: 9; }
   .bg-02 .featured-box {
     position: relative;
@@ -288,23 +289,73 @@ a:hover {
       padding: 10px 20px;
       position: relative;
       border: 1px solid #dddd;
-      border-top: 0px;
+      background: #fff;
       border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px; }
+      border-bottom-right-radius: 6px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px; }
       .bg-02 .featured-box .content h3 {
         font-size: 20px;
-        color: #222222; }
+        color: #222222;
+        align-self: center;
+        text-align: center;}
+      .bg-02 .featured-box .content h2 {
+        font-size: 16px;
+        color: #222222;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 10px;}
       .bg-02 .featured-box .content p {
-        padding: 10px 0px;
+        padding: 0px 0px;
         color: #373738;
         font-size: 14px;
-        font-weight: 500; }
-      .bg-02 .featured-box .content ol li {
+        font-weight: 500;
+        margin-top: 10px; }
+      .bg-02 .featured-box .content .mapDiv {
+        padding: 10px 0px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        width: 100%;
+        height: 250px; }
+      .bg-02 .featured-box .content .btnDiv{
+        align-items: center;
+        align-content: center;
+        width: 100%; }
+      .bg-02 .featured-box .content .acceptBtn{     
+        background-color: #16FF00;
+        padding: 5px ;
+        border-radius: 8px;
+        border-color: #222222;
+        color: #222222;
+        border-style: solid;
+        border-width: 1px;
+        margin: 10px;
+        font-size: 16px;
+        font-weight: 600; }
+      .bg-02 .featured-box .content .rejectBtn{     
+        background-color: #FF204E;
+        padding: 5px ;
+        border-radius: 8px;
+        border-color: #222222;
+        color: #222222;
+        border-style: solid;
+        border-width: 1px;
+        margin: 10px;
+        font-size: 16px;
+        font-weight: 600; }
+      .bg-02 .featured-box .content .acceptBtn:hover{
+        border-width: 3px; }
+      .bg-02 .featured-box .content .rejectBtn:hover{
+        border-width: 3px; }
+        .bg-02 .featured-box .content ol li {
         display: inline-block;
-        padding: 0 6px 0 0;
+        padding: 0 5px 0 5px;
+        margin-top: 5px;
         border-right: 1px solid #dddd;
         color: #373738;
-        font-size: 13px; }
+        font-size: 13px;}
         .bg-02 .featured-box .content ol li:nth-child(3) {
           border: none; }
     .bg-02 .featured-box .feature-card {
@@ -493,7 +544,8 @@ a:hover {
     color: #002147;
     font-weight: 800;
     letter-spacing: 0.4px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 10px; }
   .heading p {
     font-size: 16px;
     letter-spacing: 0.4px;
@@ -502,6 +554,55 @@ a:hover {
     font-weight: 400;
     line-height: 27px;
     text-transform: capitalize; }
+  .heading .options h1{
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+    font-weight: 800;
+    width: 250px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #002147;
+    display: inline-block;
+    margin: 5px 15px 0px 15px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 8px;
+    background-color: #5c5c5c;
+    cursor: pointer;}
+  .heading .options h1:hover{
+    color: #ddd; }
+  .heading .search {
+    letter-spacing: 0.4px;
+    color: #373738;
+    margin: 10px 0px; }
+    .heading .search input {
+      color: #222222;
+      padding-left: 10px;
+      margin: 10px 0px;
+      border-color: #222222;
+      border-top-left-radius: 16px; 
+      border-top-right-radius: 16px; 
+      border-bottom-left-radius: 16px; 
+      border-bottom-right-radius: 16px; }
+    .heading .search button {
+      width: 75px;
+      text-align: center;
+      font-size: 16px;
+      color: #373738;
+      border-color: #222222;
+      font-weight: 400;
+      line-height: 27px;
+      text-transform: capitalize;
+      border-top-left-radius: 5px; 
+      border-top-right-radius: 5px; 
+      border-bottom-left-radius: 5px; 
+      border-bottom-right-radius: 5px; }
+    .heading .search button:hover  {
+      background-color: rgba(0, 33, 71, 0.9);
+    color: #dddd}
 
 .bg-02-a {
   padding: 150px 0px 80px 0px;
@@ -624,6 +725,19 @@ a:hover {
       min-height: 45px;
       border-radius: 4px;
       margin: 10px 0px; }
+    .my-pla .form-group button{
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      min-height: 45px;
+      border-radius: 4px;
+      margin: 10px 0px;
+      width: 100%;
+       }
+    .my-pla .form-group button:hover {
+      color: #000;
+      background: #fff; }
+
 
 /* ================================ Footer CSS =============================== */
 footer {
@@ -685,3 +799,7 @@ footer {
         padding-left: 15px; }
 
 /*# sourceMappingURL=style.css.map */
+
+.hidden{
+  display: none;
+}
