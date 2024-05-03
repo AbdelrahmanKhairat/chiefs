@@ -602,7 +602,33 @@ a:hover {
       border-bottom-right-radius: 5px; }
     .heading .search button:hover  {
       background-color: rgba(0, 33, 71, 0.9);
-    color: #dddd}
+      color: #dddd}
+    .heading .search label{
+      font-size: 14px;
+      font-weight: 600;
+      color: #222222;
+      background-color: #5c5c5c;
+      padding: 5px; }
+    .heading .search select{
+      font-size: 14px;
+      font-weight: 600;
+      color: #222222;
+      background-color: #5c5c5c; 
+      padding: 5px; }
+    .heading .search .searchItem{
+      background-color: #5c5c5c;
+      font-size: 14px;
+      font-weight: 600;
+      color: #222222;
+      margin: 10px;
+      padding-top: 10px;
+      display: inline-block;
+      border-top-left-radius: 16px; 
+      border-top-right-radius: 16px; 
+      border-bottom-left-radius: 16px; 
+      border-bottom-right-radius: 16px;
+    }
+
 
 .bg-02-a {
   padding: 150px 0px 80px 0px;
