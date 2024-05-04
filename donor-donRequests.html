@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+    .hide {
+        /* display: none; */
+    }
+</style>
 
 <body>
 
@@ -66,37 +71,106 @@
 
                                 </select>
                                 <br><br>
-                                Age: <select name="age" id="age">
-                                    <option value="" selected="baby">0-2</option>
-                                    <option value="" selected="child">3-12</option>
-                                    <option value="" selected="teen">13-19</option>
-                                    <option value="" selected="middle aged">20-49</option>
-                                    <option value="" selected="adult">>50</option>
-                                </select>
-                                <br><br>
-                                Gender: <select name="Gender" id="Gender">
-                                    <option value="" selected="Male">Male</option>
-                                    <option value="" selected="Female">Female</option>
-                                </select>
-                                <br><br>
-                                Season: <select name="season" id="season">
-                                    <option value="" selected="Summer">Summer</option>
-                                    <option value="" selected="Winer">Winter</option>
-                                    <option value="" selected="Autom">Autom</option>
-                                    <option value="" selected="Fall">Fall</option>
+                                <div id="blood donations" class="hide">
+                                    Age: <select name="age" id="age">
+                                        <option value="" selected="baby">0-2</option>
+                                        <option value="" selected="child">3-12</option>
+                                        <option value="" selected="teen">13-19</option>
+                                        <option value="" selected="middle aged">20-49</option>
+                                        <option value="" selected="adult">>50</option>
+                                    </select>
+                                    <br><br>
+                                    Gender: <select name="Gender" id="Gender">
+                                        <option value="" selected="Male">Male</option>
+                                        <option value="" selected="Female">Female</option>
+                                    </select>
+                                    <br><br>
+                                    <br><br>
+                                    blood type: <select name="blood type" id="blood type">
+                                        <option value="" selected="A">A</option>
+                                        <option value="" selected="A">A+</option>
+                                        <option value="" selected="A">A-</option>
+                                        <option value="" selected="B">B</option>
+                                        <option value="" selected="B">B+</option>
+                                        <option value="" selected="B">B-</option>
+                                        <option value="" selected="AB">AB</option>
+                                        <option value="" selected="o">O</option>
+                                    </select>
+                                </div>
 
-                                </select>
-                                <br><br>
-                                blood type: <select name="blood type" id="blood type">
-                                    <option value="" selected="A">A</option>
-                                    <option value="" selected="A">A+</option>
-                                    <option value="" selected="A">A-</option>
-                                    <option value="" selected="B">B</option>
-                                    <option value="" selected="B">B+</option>
-                                    <option value="" selected="B">B-</option>
-                                    <option value="" selected="AB">AB</option>
-                                    <option value="" selected="o">O</option>
-                                </select>
+                                <div id="clothes" class="hide">
+                                    Age: <select name="age1" id="age1">
+                                        <option value="" selected="baby">0-2</option>
+                                        <option value="" selected="child">3-12</option>
+                                        <option value="" selected="teen">13-19</option>
+                                        <option value="" selected="middle aged">20-49</option>
+                                        <option value="" selected="adult">50</option>
+                                    </select>
+                                    <br><br>
+                                    Gender: <select name="Gender1" id="Gender1">
+                                        <option value="" selected="Male">Male</option>
+                                        <option value="" selected="Female">Female</option>
+                                    </select>
+                                    Season: <select name="Season" id="Season">
+                                        <option value="" selected="Winter">Winter</option>
+                                        <option value="" selected="Summer">Summer</option>
+                                    </select>
+                                    <input type="number" name="amount of clothes" id="amount of clothes"
+                                        placeholder="clothes">
+                                </div>
+                                <div id="school supplies" class="hide">
+                                    Books: <select name="Books" id="Books">
+                                        <option value="" select="Fantasy">Fantasy</option>
+                                        <option value="" select="Horror">Horror</option>
+                                        <option value="" select="Mystery">Mystery</option>
+                                        <option value="" select="Romance">Romance</option>
+                                    </select>
+                                    <input type="number" name="amount of Books" id="amount of Books1"
+                                        placeholder="amount of Books">
+                                    Education Books : <br>
+                                    American Deploma : <select name="American Books" id="American Books">
+                                        <option value="" selected="grade 1">grade 1 </option>
+                                        <option value="" selected="grade 2">grade 2</option>
+                                        <option value="" selected="grade 3">grade 3</option>
+                                        <option value="" selected="grade 4">grade 4</option>
+                                        <option value="" selected="grade 5">grade 5</option>
+                                        <option value="" selected="grade 6">grade 6</option>
+                                        <option value="" selected="grade 7">grade 7</option>
+                                        <option value="" selected="grade 8">grade 8</option>
+                                        <option value="" selected="grade 9">grade 9</option>
+                                        <option value="" selected="grade 10">grade 10</option>
+                                        <option value="" selected="grade 11">grade 11</option>
+                                        <option value="" selected="grade 12">grade 12</option>
+                                    </select>
+                                    <input type="number" name="amount of Books" id="amount of Books2"
+                                        placeholder="amount of Books">
+                                    <br>IGCSE Deploma : <select name="IGCSE Books" id="IGCSE Books">
+                                        <option value="" selected="grade 1">grade 1 </option>
+                                        <option value="" selected="grade 2">grade 2</option>
+                                        <option value="" selected="grade 3">grade 3</option>
+                                        <option value="" selected="grade 4">grade 4</option>
+                                        <option value="" selected="grade 5">grade 5</option>
+                                        <option value="" selected="grade 6">grade 6</option>
+                                        <option value="" selected="grade 7">grade 7</option>
+                                        <option value="" selected="grade 8">grade 8</option>
+                                        <option value="" selected="grade 9">grade 9</option>
+                                        <option value="" selected="grade 10">grade 10</option>
+                                        <option value="" selected="grade 11">grade 11</option>
+                                        <option value="" selected="grade 12">grade 12</option>
+                                    </select>
+                                    <input type="number" name="amount of Books" id="amount of Books3"
+                                        placeholder="amount of Books">
+                                    Stationary : <select name="Stationary" id="Stationary">
+                                        <option value="Pens" selected="Pens">Pens</option>
+                                        <option value="Pencils" selected="Pencils">Pencils</option>
+                                        <option value="Erases" selected="Erases">Erases</option>
+                                        <option value="Notebooks" selected="Notebooks">Notebooks</option>
+                                        <option value="Folders" selected="Folders">Folders</option>
+                                    </select>
+                                    <input type="number" name="amount of Stationary" id="amount of Stationary"
+                                        placeholder="amount of Stationary">
+                                </div>
+
                                 <br><br>
                                 <input type="submit" value="Submit">
                             </form>
