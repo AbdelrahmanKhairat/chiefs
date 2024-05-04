@@ -40,3 +40,31 @@ $('.counting').each(function () {
 
 });
 
+function deletePost(id) {
+  var div = document.getElementById(id);
+      if (div) {
+        div.parentNode.removeChild(div);
+      }
+}
+
+function updatePost(txtBoxDiv,id) {
+  // Get the input value from the text box
+  var inputText = document.getElementById(txtBoxDiv).value;
+
+  // Update the content of the div with the input value
+  document.getElementById(id).textContent = inputText;
+}
+
+var coll = document.getElementsByClassName("collapsible");
+
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
