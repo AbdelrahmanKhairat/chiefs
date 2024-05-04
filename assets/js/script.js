@@ -5,15 +5,6 @@ $(document).ready(function () {
   });
 });
 
-$(() => {
-
-  //On Scroll Functionality
-  $(window).scroll(() => {
-    var windowTop = $(window).scrollTop();
-    windowTop > 50 ? $('header').addClass('og-hf') : $('header').removeClass('og-hf');
-  });
-});
-
 $('.counting').each(function () {
   var $this = $(this),
     countTo = $this.attr('data-count');
