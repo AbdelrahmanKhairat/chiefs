@@ -37,192 +37,192 @@
             <div class="row">
                 <div class="col-12">
                     <div class="_head_01">
-                        <h2>Donation Requests</h2>
+                        <h2>Donor</h2>
+                        <p>Home<i class="fas fa-angle-right"></i>Dashboard<i
+                                class="fas fa-angle-right"></i><span>Requests</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="se-001">
+    <section class="bg-02">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                    <div class="_kl_de_w">
-                        <h3>Donation Requests</h3>
-                        <form class="my-form">
-                            <label for="Filter">apply your filter:</label>
+            <div class="row" id="requestBox">
 
-
-                            <form id="form">
-                                <input type="search" id="query" name="q" placeholder="Search...">
-                                <button>Search</button>
-                            </form>
-                            <form name="form1" id="form1" onchange="changeDiv()">
-
-                                Categories: <select name="catigory" id="category">
-                                    <option value="blood donations" >blood donations</option>
-                                    <option value="clothes" >clothes</option>
-                                    <option value="school supplies">school supplies</option>
-                                    <option value="toys" >toys</option>  
-                                    <option value="food" >food</option>
-                                    <option value="medical supplies" >medical supplies</option>
-                                    
-                                </select>
+                <div class="col-12">
+                    <div class="heading">
+                        <h2>Requests</h2>
+                        
+                        <div class="search">
+                            <input type="text" id="searchDonorRequest" placeholder="Search...">
+                            <button onclick="allReqs()">Search</button>
+                        </div>
+                        
+                        <div class="search">
+                            <form id="form1" onchange="changeDiv()">
+                                <div class = "searchItem col-3">
+                                    <label for="Categories">Categories</label>
+                                    <select id="category">
+                                        <option value="options">choose</option>
+                                        <option value="blood donations">blood donations</option>
+                                        <option value="clothes">clothes</option>
+                                        <option value="school supplies">school supplies</option>
+                                        <option value="toys">toys</option>
+                                        <option value="food">food</option>
+                                        <option value="medical supplies">medical supplies</option> 
+                                    </select>
+                                </div>
                                 
-                                <div id="blood donations" class="hide">
-                                    Age: <select name="age" id="age">
-                                        <option value="" selected="baby">0-2</option>
-                                        <option value="" selected="child">3-12</option>
-                                        <option value="" selected="teen">13-19</option>
-                                        <option value="" selected="middle aged">20-49</option>
-                                        <option value="" selected="adult">>50</option>
-                                    </select>
-                                    <br><br>
-                                    Gender: <select name="Gender" id="Gender">
-                                        <option value="" selected="Male">Male</option>
-                                        <option value="" selected="Female">Female</option>
-                                    </select>
-                                    blood type: <select name="blood type" id="blood type">
-                                        <option value="" selected="A">A</option>
-                                        <option value="" selected="A">A+</option>
-                                        <option value="" selected="A">A-</option>
-                                        <option value="" selected="B">B</option>
-                                        <option value="" selected="B">B+</option>
-                                        <option value="" selected="B">B-</option>
-                                        <option value="" selected="AB">AB</option>
-                                        <option value="" selected="o">O</option>
-                                    </select>
-                                </div>
-
-                                <div id="clothes" class="hide">
-                                    Age: <select name="age1" id="age1">
-                                        <option value="" selected="baby">0-2</option>
-                                        <option value="" selected="child">3-12</option>
-                                        <option value="" selected="teen">13-19</option>
-                                        <option value="" selected="middle aged">20-49</option>
-                                        <option value="" selected="adult">50</option>
-                                    </select>
-                                    Gender: <select name="Gender1" id="Gender1">
-                                        <option value="" selected="Male">Male</option>
-                                        <option value="" selected="Female">Female</option>
-                                    </select>
-                                    Season: <select name="Season" id="Season">
-                                        <option value="" selected="Winter">Winter</option>
-                                        <option value="" selected="Summer">Summer</option>
-                                    </select>
-                                </div>
-
-                                <div id="school supplies" class="hide">
-                                    Type: <select name="Books" id="Books">
-                                        <option value="" select="Fantasy">Books</option>
-                                        <option value="" select="Horror">Stationary</option>
-                                    </select>
-                                    
-                                </div>
-
-                                <div id="toys" class="hide">
-                                    age: <select id="age3">
-                                        <option value="" >0-2</option>
-                                        <option value="">3-12</option>
-                                        <option value="">13-19</option>
-                                        <option value="">20-49</option>
-                                        <option value="">50</option>
-                                    </select>
-                                    
-                                    Gender: <select  id="Gender3">
-                                        <option value="" >Male</option>
-                                        <option value="" >Female</option>
-                                    </select>
-                                    type: <select id="toy type">
-                                        <option value="" > stuffed toys</option>
-                                        <option value="" >dolls</option>
-                                        <option value="" >sports</option>
-                                        <option value="" >cars</option>
-                                        <option value="" >outdoor</option>
-                                        <option value="" >board games</option>
-                                        
-                                    </select>
-                                </div>
-
-                                <div id="medical supplies" class="hide">
-                                    Type: <select id="medicalYtpe">
-                                        <option value="" >medical devices</option>
-                                        <option value="">medical equipment</option>
-                                        <option value="">medication</option>
-                                    </select>
-                                    
-                                </div>
-
-                                <div id="food" class="hide">
-                                    Type: <select id="foodType">
-                                        <option value="" >fruits</option>
-                                        <option value="">vegetables</option>
-                                        <option value="">baked food</option>
-                                        <option value="">canned food</option>
-                                        <option value="">fresh food</option>
-                                    </select>
-                                    
-                                </div>
-
-
-                                <input type="submit" value="Submit">
-
-
                             </form>
-                            
-                            <div class="box">
-                                Requests should show here !
-                            </div>
+                        </div>
 
-                        </form>
+                        <div class="search">
+                            <form id="form1" onchange="changeDiv()">
+                                <div id="blood donations" class="hide">
+                                    
+                                    <div class="searchItem col-3">
+                                        <Label for="Age">Age</Label>
+                                        <select name="age" id="age">
+                                            <option value="" selected="baby">0-2</option>
+                                            <option value="" selected="child">3-12</option>
+                                            <option value="" selected="teen">13-19</option>
+                                            <option value="" selected="middle aged">20-49</option>
+                                            <option value="" selected="adult">>50</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label for="Gender">Gender</Label>
+                                        <select name="Gender" id="Gender">
+                                            <option value="" selected="Male">Male</option>
+                                            <option value="" selected="Female">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="searchItem col-3">
+                                        <Label for="blood type">blood type</Label>
+                                        <select name="blood type" id="blood type">
+                                            <option value="" selected="A">A</option>
+                                            <option value="" selected="A">A+</option>
+                                            <option value="" selected="A">A-</option>
+                                            <option value="" selected="B">B</option>
+                                            <option value="" selected="B">B+</option>
+                                            <option value="" selected="B">B-</option>
+                                            <option value="" selected="AB">AB</option>
+                                            <option value="" selected="o">O</option>
+                                        </select>>
+                                    </div> 
+                                </div>
+                                <div id="clothes" class="hide">
+                                    <div class="searchItem col-3">
+                                        <Label for="Age">Age</Label>
+                                        <select name="age" id="clothesAge">
+                                            <option value="" selected="baby">0-2</option>
+                                            <option value="" selected="child">3-12</option>
+                                            <option value="" selected="teen">13-19</option>
+                                            <option value="" selected="middle aged">20-49</option>
+                                            <option value="" selected="adult">>50</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label for="Gender">Gender</Label>
+                                        <select name="Gender1" id="clothesGender">
+                                            <option value="" selected="Male">Male</option>
+                                            <option value="" selected="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label for="Season">Season</Label>
+                                        <select name="Season" id="Season">
+                                            <option value="" selected="Winter">Winter</option>
+                                            <option value="" selected="Summer">Summer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="school supplies" class="hide">
+                                    <div class="searchItem col-3">
+                                        <Label for="Type">Type</Label>
+                                        <select id="schoolSupp">
+                                            <option value="" select="Fantasy">Books</option>
+                                            <option value="" select="Horror">Stationary</option>
+                                        </select>
+                                    </div>
+                                    
+            
+                                </div>
+                                <div id="toys" class="hide">
+
+                                    <div class="searchItem col-3">
+                                        <Label for="Age">Age</Label>
+                                        <select id="age3">
+                                            <option value="">0-2</option>
+                                            <option value="">3-12</option>
+                                            <option value="">13-19</option>
+                                            <option value="">20-49</option>
+                                            <option value="">50</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="searchItem col-3">
+                                        <Label for="Gender">Gender</Label>
+                                        <select id="Gender3">
+                                            <option value="">Male</option>
+                                            <option value="">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="searchItem col-3">
+                                        <Label for="type">type</Label>
+                                        <select id="toy type">
+                                            <option value=""> stuffed toys</option>
+                                            <option value="">dolls</option>
+                                            <option value="">sports</option>
+                                            <option value="">cars</option>
+                                            <option value="">outdoor</option>
+                                            <option value="">board games</option>
+                                        </select>
+                                    </div> 
+                                </div>
+                                <div id="medical supplies" class="hide">
+                                    <div class="searchItem col-3">
+                                        <Label for="Type">Type</Label>
+                                        <select id="medicalYtpe">
+                                            <option value="">medical devices</option>
+                                            <option value="">medical equipment</option>
+                                            <option value="">medication</option>
+                                        </select>
+                                    </div>
+
+                                    
+            
+                                </div>            
+                                <div id="food" class="hide">
+
+                                    <div class="searchItem col-3">
+                                        <Label for="Type">Type</Label>
+                                        <select id="foodType">
+                                            <option value="">fruits</option>
+                                            <option value="">vegetables</option>
+                                            <option value="">baked food</option>
+                                            <option value="">canned food</option>
+                                            <option value="">fresh food</option>
+                                        </select>
+    
+                                    </div>
+                                                
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
+
 
 
             </div>
         </div>
-        <section class="se-001">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                        <div class="_kl_de_w">
-                            <h3>select quantity</h3>
-                            <form class="my-form">
-                                <div class="form-group">
-                                    <input class="form-control" type="quantity" name="quantity" placeholder="quantity">
-                                </div>
-                                <a href="index.html">donate</a>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="_Ol_er_qw yu">
-                        <img src="assets/images/team/11.jpg">
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <a href="donor-profile.html">
-            <button>Back</button>
-        </a>
     </section>
 
     <!-- ====================== section started====================== -->
-
-    
-    <!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#catigory").on('change' , function(){
-            $("#" + $(this).val()).fadeIn(700);
-        }).change();
-    })
-</script>
--->
 
     <script src="assets/js/donor-script.js"></script>
 
