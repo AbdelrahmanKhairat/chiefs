@@ -11,7 +11,7 @@
 </head>
 <style>
     .hide {
-        /* display: none; */
+        display: none;
     }
 </style>
 
@@ -58,19 +58,18 @@
                                 <input type="search" id="query" name="q" placeholder="Search...">
                                 <button>Search</button>
                             </form>
-                            <form name="form1" id="form1" action="/action_page.php">
-                                Categories: <select name="catigory" id="catigory">
-                                    <option value="" selected="clothes">clothes</option>
-                                    <option value="" selected="toys">toys</option>
-                                    <option value="" selected="food">food</option>
-                                    <option value="" selected="medical supplies">medical supplies</option>
-                                    <option value="" selected="school supplies">school supplies</option>
-                                    <option value="" selected="blood donations">blood donation</option>
-                                    <option value="" selected="books">Books</option>
-                                    <option value="" selected="Stationery">Stationery</option>
+                            <form name="form1" id="form1" onchange="changeDiv()">
 
+                                Categories: <select name="catigory" id="category">
+                                    <option value="blood donations" >blood donations</option>
+                                    <option value="clothes" >clothes</option>
+                                    <option value="school supplies">school supplies</option>
+                                    <option value="toys" >toys</option>  
+                                    <option value="food" >food</option>
+                                    <option value="medical supplies" >medical supplies</option>
+                                    
                                 </select>
-                                <br><br>
+                                
                                 <div id="blood donations" class="hide">
                                     Age: <select name="age" id="age">
                                         <option value="" selected="baby">0-2</option>
@@ -84,8 +83,6 @@
                                         <option value="" selected="Male">Male</option>
                                         <option value="" selected="Female">Female</option>
                                     </select>
-                                    <br><br>
-                                    <br><br>
                                     blood type: <select name="blood type" id="blood type">
                                         <option value="" selected="A">A</option>
                                         <option value="" selected="A">A+</option>
@@ -106,7 +103,6 @@
                                         <option value="" selected="middle aged">20-49</option>
                                         <option value="" selected="adult">50</option>
                                     </select>
-                                    <br><br>
                                     Gender: <select name="Gender1" id="Gender1">
                                         <option value="" selected="Male">Male</option>
                                         <option value="" selected="Female">Female</option>
@@ -115,65 +111,66 @@
                                         <option value="" selected="Winter">Winter</option>
                                         <option value="" selected="Summer">Summer</option>
                                     </select>
-                                    <input type="number" name="amount of clothes" id="amount of clothes"
-                                        placeholder="clothes">
-                                </div>
-                                <div id="school supplies" class="hide">
-                                    Books: <select name="Books" id="Books">
-                                        <option value="" select="Fantasy">Fantasy</option>
-                                        <option value="" select="Horror">Horror</option>
-                                        <option value="" select="Mystery">Mystery</option>
-                                        <option value="" select="Romance">Romance</option>
-                                    </select>
-                                    <input type="number" name="amount of Books" id="amount of Books1"
-                                        placeholder="amount of Books">
-                                    Education Books : <br>
-                                    American Deploma : <select name="American Books" id="American Books">
-                                        <option value="" selected="grade 1">grade 1 </option>
-                                        <option value="" selected="grade 2">grade 2</option>
-                                        <option value="" selected="grade 3">grade 3</option>
-                                        <option value="" selected="grade 4">grade 4</option>
-                                        <option value="" selected="grade 5">grade 5</option>
-                                        <option value="" selected="grade 6">grade 6</option>
-                                        <option value="" selected="grade 7">grade 7</option>
-                                        <option value="" selected="grade 8">grade 8</option>
-                                        <option value="" selected="grade 9">grade 9</option>
-                                        <option value="" selected="grade 10">grade 10</option>
-                                        <option value="" selected="grade 11">grade 11</option>
-                                        <option value="" selected="grade 12">grade 12</option>
-                                    </select>
-                                    <input type="number" name="amount of Books" id="amount of Books2"
-                                        placeholder="amount of Books">
-                                    <br>IGCSE Deploma : <select name="IGCSE Books" id="IGCSE Books">
-                                        <option value="" selected="grade 1">grade 1 </option>
-                                        <option value="" selected="grade 2">grade 2</option>
-                                        <option value="" selected="grade 3">grade 3</option>
-                                        <option value="" selected="grade 4">grade 4</option>
-                                        <option value="" selected="grade 5">grade 5</option>
-                                        <option value="" selected="grade 6">grade 6</option>
-                                        <option value="" selected="grade 7">grade 7</option>
-                                        <option value="" selected="grade 8">grade 8</option>
-                                        <option value="" selected="grade 9">grade 9</option>
-                                        <option value="" selected="grade 10">grade 10</option>
-                                        <option value="" selected="grade 11">grade 11</option>
-                                        <option value="" selected="grade 12">grade 12</option>
-                                    </select>
-                                    <input type="number" name="amount of Books" id="amount of Books3"
-                                        placeholder="amount of Books">
-                                    Stationary : <select name="Stationary" id="Stationary">
-                                        <option value="Pens" selected="Pens">Pens</option>
-                                        <option value="Pencils" selected="Pencils">Pencils</option>
-                                        <option value="Erases" selected="Erases">Erases</option>
-                                        <option value="Notebooks" selected="Notebooks">Notebooks</option>
-                                        <option value="Folders" selected="Folders">Folders</option>
-                                    </select>
-                                    <input type="number" name="amount of Stationary" id="amount of Stationary"
-                                        placeholder="amount of Stationary">
                                 </div>
 
-                                <br><br>
+                                <div id="school supplies" class="hide">
+                                    Type: <select name="Books" id="Books">
+                                        <option value="" select="Fantasy">Books</option>
+                                        <option value="" select="Horror">Stationary</option>
+                                    </select>
+                                    
+                                </div>
+
+                                <div id="toys" class="hide">
+                                    age: <select id="age3">
+                                        <option value="" >0-2</option>
+                                        <option value="">3-12</option>
+                                        <option value="">13-19</option>
+                                        <option value="">20-49</option>
+                                        <option value="">50</option>
+                                    </select>
+                                    
+                                    Gender: <select  id="Gender3">
+                                        <option value="" >Male</option>
+                                        <option value="" >Female</option>
+                                    </select>
+                                    type: <select id="toy type">
+                                        <option value="" > stuffed toys</option>
+                                        <option value="" >dolls</option>
+                                        <option value="" >sports</option>
+                                        <option value="" >cars</option>
+                                        <option value="" >outdoor</option>
+                                        <option value="" >board games</option>
+                                        
+                                    </select>
+                                </div>
+
+                                <div id="medical supplies" class="hide">
+                                    Type: <select id="medicalYtpe">
+                                        <option value="" >medical devices</option>
+                                        <option value="">medical equipment</option>
+                                        <option value="">medication</option>
+                                    </select>
+                                    
+                                </div>
+
+                                <div id="food" class="hide">
+                                    Type: <select id="foodType">
+                                        <option value="" >fruits</option>
+                                        <option value="">vegetables</option>
+                                        <option value="">baked food</option>
+                                        <option value="">canned food</option>
+                                        <option value="">fresh food</option>
+                                    </select>
+                                    
+                                </div>
+
+
                                 <input type="submit" value="Submit">
+
+
                             </form>
+                            
                             <div class="box">
                                 Requests should show here !
                             </div>
@@ -215,45 +212,19 @@
 
     <!-- ====================== section started====================== -->
 
+    
+    <!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#catigory").on('change' , function(){
+            $("#" + $(this).val()).fadeIn(700);
+        }).change();
+    })
+</script>
+-->
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-        <div class="_kl_de_w">
-            <h3>Services</h3>
-            <ol>
-                <li><i class="far fa-angle-right"></i>Raise fund for healthy food</li>
-                <li><i class="far fa-angle-right"></i>Education for poor children</li>
-                <li><i class="far fa-angle-right"></i>Promoting the rights of children</li>
-                <li><i class="far fa-angle-right"></i>Massive donation to poor</li>
-                <li class="last"><i class="far fa-angle-right"></i>Huge help to homeless pupil</li>
-            </ol>
-        </div>
-    </div>
-
-    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-        <div class="_kl_de_w">
-            <h3>Contact Us</h3>
-            <form class="my-form">
-                <div class="form-group">
-                    <input class="form-control" type="email" name="email" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <textarea rows="3" placeholder="Message" class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                    <a href="#">Submit</a>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="col-12">
-        <div class="copy-right">
-            <p>© 2020 All Rights Reserved by<a href="https://www.smarteyeapps.com/">SmartEye</a></p>
-        </div>
-    </div>
-    </div>
-    </div>
-    </footer>
+    <script src="assets/js/donor-script.js"></script>
 
 </body>
 
