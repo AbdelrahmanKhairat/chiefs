@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Charity</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  
+   
+  <!-- ======================header started====================== -->
+
+  <header>
+    <div class="my-nav">
+      <div class="container">
+        <div class="row">
+          <div class="nav-items">
+            <div class="menu-toggle"></div>
+            <div class="logo">
+              <img src="assets/images/logo.png">
+            </div>
+            <div class="menu-items">
+              <div class="menu">
+                <ul>
+                  <li><a href="admin-dashboard.html">Home</a></li>
+                  <li><a href="admin-org.html">Organisations</a></li>
+                  <li><a href="admin-donor.html">Donors</a></li>
+                  <li><a href="admin-account.html">My Account</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-02-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="_head_01">
+                    <h2>Admin</h2>
+                    <p>Home<i class="fas fa-angle-right"></i>Dashboard<i class="fas fa-angle-right"></i><span>Organisations</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="bg-02">
+    <div class="container">
+      <div class="row" id = "orgsBox">
+        
+        <div class="col-12">
+          <div class="heading">
+            <h2>Organisations</h2>
+            <div class = "options">
+              <h1 onclick="getRegisteredOrgs()">Registered</h1>
+              <h1 onclick="getPendingOrgs()">Pending</h1>
+            </div>
+            <div class = "search">
+              <input type="text" id="searchOrgsInput" placeholder="Search...">
+              <button onclick="searchgOrgs()">Search</button>
+            </div>
+            
+            <div class ="search">
+              <form id="orgFilterForm">
+                <div class ="searchItem col-3">
+                  <label for="area">Area:</label>
+                  <select id="filterArea">
+                      <option value="options">options</option>
+                      <option value="Area1">Area 1</option>
+                      <option value="Area2">Area 2</option>
+                      <!-- Add more options as needed -->
+                  </select>
+                </div>
+
+                <div class ="searchItem col-3">
+                  <label for="governorate">Governorate:</label>
+                  <select id="filterGovernorate">
+                      <option value="options">options</option>
+                      <option value="Governorate1">Governorate 1</option>
+                      <option value="Governorate2">Governorate 2</option>
+                      <!-- Add more options as needed -->
+                  </select>
+                </div>
+
+                <div class ="searchItem col-3">
+                  <label for="orgType">Organisation Type:</label>
+                  <select id="filterOrgType">
+                      <option value="options">options</option>
+                      <option value="Type1">Type 1</option>
+                      <option value="Type2">Type 2</option>
+                      <!-- Add more options as needed -->
+                  </select>
+                </div>
+              
+                <button type="button" onclick="filterOrganisations()">Filter</button>
+            </form>
+            </div>
+
+            
+          </div>
+        </div>  
+        
+        
+
+      </div>
+    </div>
+  </section>
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js" async defer></script>
+  <script src="assets/js/admin-script.js"></script>
+  
+
+
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+</html>
