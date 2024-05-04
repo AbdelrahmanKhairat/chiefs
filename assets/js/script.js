@@ -40,5 +40,3 @@ $('.counting').each(function () {
 
 });
 
-
-
