@@ -1,8 +1,9 @@
 var requests = [];
 
 
-function BloodDonationRequest(patientName, bloodType, hospitalName, hospitalArea, hospitalGov, hospitalAddress, patientAge) {
+function BloodDonationRequest(patientName, patientGender, bloodType, hospitalName, hospitalArea, hospitalGov, hospitalAddress, patientAge) {
     this.patientName = patientName;
+    this.patientGender = patientGender;
     this.bloodType = bloodType;
     this.hospitalName = hospitalName;
     this.hospitalArea = hospitalArea;
@@ -39,7 +40,8 @@ function ToysRequest(type, age, gender, category, pictureName) {
     this.pictureName = pictureName;
 }
 
-function FoodRequest(name, quantity) {
+function FoodRequest(type, name, quantity) {
+    this.type = type;
     this.name = name;
     this.quantity = quantity;
 }
@@ -54,20 +56,20 @@ function MedicalSuppliesRequest(deviceType, use, image, quantity) {
 
 function createdummyRequests(){
 
-    var req1 = new BloodDonationRequest("John Doe", "O+", "City Hospital", "Downtown", "New York", "123 Main St", 30);
-    var req2 = new BloodDonationRequest("Jane Smith", "AB-", "County Hospital", "Uptown", "Los Angeles", "456 Elm St", 45);
-    var req3 = new BloodDonationRequest("Michael Johnson", "B+", "General Hospital", "Midtown", "Chicago", "789 Oak St", 50);
-    var req4 = new BloodDonationRequest("Emily Davis", "A-", "University Hospital", "Suburb", "Houston", "101 Pine St", 35);
-    var req5 = new ClothesRequest("Shirt", 25, "Male", "Summer", "Cotton", 10);
-    var req6 = new ClothesRequest("Sweater", 8, "Female", "Winter", "Wool", 5);
-    var req7 = new SchoolSuppliesRequest("Textbook", "Mathematics for Beginners", "John Smith", "English", "1st Edition", "Introduction to basic math concepts.", "math_book.jpg", 20);
-    var req8 = new SchoolSuppliesRequest("Notebook", "Blank Pages Notebook", "N/A", "Any", "N/A", "Blank pages for writing or drawing.", "blank_notebook.jpg", 50);
-    var req9 = new ToysRequest("Action Figure", 5, "Male", "Action Figures", "action_figure.jpg");
-    var req10 = new ToysRequest("Doll", 7, "Female", "Dolls", "doll.jpg");
-    var req11 = new FoodRequest("Rice", 10);
-    var req12 = new FoodRequest("Apples", 20);
-    var req13 = new MedicalSuppliesRequest("Thermometer", "Measuring body temperature", "thermometer.jpg", 5);
-    var req14 = new MedicalSuppliesRequest("Bandages", "Wound dressing", "bandages.jpg", 50);
+    var req1 = new BloodDonationRequest("John Doe","male", "O+", "City Hospital", "Downtown", "New York", "123 Main St", "child");
+    var req2 = new BloodDonationRequest("Jane Smith","female", "AB-", "County Hospital", "Uptown", "Los Angeles", "456 Elm St", "infant");
+    var req3 = new BloodDonationRequest("Michael Johnson","male", "B+", "General Hospital", "Midtown", "Chicago", "789 Oak St", "senior");
+    var req4 = new BloodDonationRequest("Emily Davis","female", "A-", "University Hospital", "Suburb", "Houston", "101 Pine St", "teen");
+    var req5 = new ClothesRequest("Shirt", "adult", "male", "Summer", "Cotton", 10);
+    var req6 = new ClothesRequest("Sweater", "child", "female", "Winter", "Wool", 5);
+    var req7 = new SchoolSuppliesRequest("Books", "Mathematics for Beginners", "John Smith", "English", "1st Edition", "Introduction to basic math concepts.", "math_book.jpg", 20);
+    var req8 = new SchoolSuppliesRequest("Stationary", "Blank Pages Notebook", "N/A", "Any", "N/A", "Blank pages for writing or drawing.", "blank_notebook.jpg", 50);
+    var req9 = new ToysRequest("sports", "teen", "Male", "sports", "action_figure.jpg");
+    var req10 = new ToysRequest("dolls", "child", "Female", "dolls", "doll.jpg");
+    var req11 = new FoodRequest("canned food","beans", 10);
+    var req12 = new FoodRequest("wfruits", "Apples", 20);
+    var req13 = new MedicalSuppliesRequest("medical devices", "Measuring body temperature", "thermometer.jpg", 5);
+    var req14 = new MedicalSuppliesRequest("medication", "Wound dressing", "bandages.jpg", 50);
 
 
     requests.push(req1);
@@ -78,18 +80,16 @@ function createdummyRequests(){
     requests.push(req6);
     requests.push(req7);
     requests.push(req8);
-    
+    requests.push(req9);
+    requests.push(req10);
     requests.push(req11);
     requests.push(req12);
     requests.push(req13);
     requests.push(req14);
-    requests.push(req9);
-    requests.push(req10);
+    
 
 }
-
 createdummyRequests();
-
 
 
 function getFoodReq(x)  {
@@ -123,7 +123,6 @@ function getFoodReq(x)  {
 
     return div;
 }
-
 function getBloodDonationReq(bloodDonationRequest) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4", "col-md-4", "col-sm-6", "col-xs-12");
@@ -144,6 +143,9 @@ function getBloodDonationReq(bloodDonationRequest) {
 
     const patientName = document.createElement("p");
     patientName.innerText = "Patient Name: " + bloodDonationRequest.patientName;
+
+    const patientGender = document.createElement("p");
+    patientGender.innerText = "Patient Age: " + bloodDonationRequest.patientGender;
 
     const patientAge = document.createElement("p");
     patientAge.innerText = "Patient Age: " + bloodDonationRequest.patientAge;
@@ -174,6 +176,7 @@ function getBloodDonationReq(bloodDonationRequest) {
     content.appendChild(hr);
     content.appendChild(patientDetails);
     content.appendChild(patientName);
+    content.appendChild(patientGender);
     content.appendChild(patientAge);
     content.appendChild(bloodType);
     content.appendChild(hr1);
@@ -188,7 +191,6 @@ function getBloodDonationReq(bloodDonationRequest) {
 
     return div;
 }
-
 function getClothesReq(clothesRequest) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4", "col-md-4", "col-sm-6", "col-xs-12");
@@ -240,7 +242,6 @@ function getClothesReq(clothesRequest) {
 
     return div;
 }
-
 function getSchoolSuppliesReq(schoolSuppliesRequest) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4", "col-md-4", "col-sm-6", "col-xs-12");
@@ -300,7 +301,6 @@ function getSchoolSuppliesReq(schoolSuppliesRequest) {
 
     return div;
 }
-
 function getToysReq(toysRequest) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4", "col-md-4", "col-sm-6", "col-xs-12");
@@ -348,8 +348,6 @@ function getToysReq(toysRequest) {
 
     return div;
 }
-
-
 function getMedicalSuppliesReq(medicalSuppliesRequest) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4", "col-md-4", "col-sm-6", "col-xs-12");
@@ -425,19 +423,248 @@ function allReqs(){
         reqContainer.appendChild(reqDiv);
     });
 }
+function searchRequests(){
+    const reqContainer = document.getElementById("requestBox");
+    const children = reqContainer.children;
+
+    for(var i = children.length -1 ; i>0; i--){
+        reqContainer.removeChild(children[i]);
+    }
+
+    const searchString = document.getElementById("searchDonorRequest").value.toLowerCase();;
+    document.getElementById("searchDonorRequest").value = "";
+    
+    requests.forEach(function(req){
+        
+        let reqDiv;
+
+        if(searchString === "food"){
+            if (req instanceof FoodRequest)
+                reqDiv = getFoodReq(req);
+            else return;
+            
+        } else if(searchString === "clothes"){
+            if (req instanceof ClothesRequest)
+                reqDiv = getClothesReq(req);
+            else return;
+            
+        } else if(searchString === "blood donations"){
+            if (req instanceof BloodDonationRequest)
+                reqDiv = getBloodDonationReq(req);
+            else return;
+
+        } else if(searchString === "toys"){
+            if (req instanceof ToysRequest) 
+                reqDiv = getToysReq(req);
+            else return;
+
+        } else if(searchString === "school supplies"){
+            if (req instanceof SchoolSuppliesRequest) 
+                reqDiv = getSchoolSuppliesReq(req);
+            else return;
+
+        } else if(searchString === "medical supplies"){
+            if (req instanceof MedicalSuppliesRequest)
+                reqDiv = getMedicalSuppliesReq(req);
+            else return;
+        }
+
+        reqContainer.appendChild(reqDiv);
+    });
+
+}
+function filterRequests(){
+    const reqContainer = document.getElementById("requestBox");
+    const children = reqContainer.children;
+
+    for(var i = children.length -1 ; i>0; i--){
+        reqContainer.removeChild(children[i]);
+    }
+
+    const searchString = document.getElementById("category").value.toLowerCase();
+    document.getElementById("category").value = "";
+
+    requests.forEach(function(req){
+        
+        let reqDiv;
+
+        if(searchString === "food"){
+            if (req instanceof FoodRequest & filterFood(req))
+                reqDiv = getFoodReq(req);
+            else return;
+            
+        } else if(searchString === "clothes" ){
+            if (req instanceof ClothesRequest & filterClothes(req))
+                reqDiv = getClothesReq(req);
+            else return;
+            
+        } else if(searchString === "blood donations" ){
+            if (req instanceof BloodDonationRequest & filterBloodDonations(req))
+                reqDiv = getBloodDonationReq(req);
+            else return;
+
+        } else if(searchString === "toys" ){
+            if (req instanceof ToysRequest & filterToys(req)) 
+                reqDiv = getToysReq(req);
+            else return;
+
+        } else if(searchString === "school supplies" ){
+            if (req instanceof SchoolSuppliesRequest & filterSchoolSupp(req)) 
+                reqDiv = getSchoolSuppliesReq(req);
+            else return;
+
+        } else if(searchString === "medical supplies" ){
+            if (req instanceof MedicalSuppliesRequest & filterMedicalSupp(req))
+                reqDiv = getMedicalSuppliesReq(req);
+            else return;
+        }
 
 
 
 
 
+        reqContainer.appendChild(reqDiv);
+    });
+
+    resetAllOptions();
+    changeDiv();
+}
 
 
+function filterBloodDonations(req){
 
+    var flag = true;
+    var age = document.getElementById("bloodDonAge").value;
+    var gender = document.getElementById("bloodDonGender").value;
+    var type = document.getElementById("bloodDonType").value;
 
+    if(age !== ""){
+        if(age === req.patientAge){
+            flag = flag & true;
+        }else{
+            flag = false;
+        }
+    }
+    if(gender !== ""){
+        if(gender === req.patientGender){
+            flag = flag & true;
+        } else{
+            flag = false;
+        }
+    }
+    if(type !== ""){
+        if(type === req.bloodType){
+            flag = flag & true;
+        }else {
+            flag = false;
+        }
+    }
 
+    return flag;
 
+}
+function filterClothes(req){
+    var flag = true;
+    var age = document.getElementById("clothesAge").value;
+    var gender = document.getElementById("clothesGender").value.toLowerCase();
+    var season = document.getElementById("season").value;
 
+    if(age !== ""){
+        if(age === req.age){
+            flag = flag & true;
+        }else{
+            flag = false;
+        }
+    }
+    if(gender !== ""){
+        if(gender === req.gender){
+            flag = flag & true;
+        } else{
+            flag = false;
+        }
+    }
+    if(season !== ""){
+        if(season === req.season){
+            flag = flag & true;
+        }else {
+            flag = false;
+        }
+    }
 
+    return flag;
+}
+function filterSchoolSupp(req){
+    var flag = true;
+    var type = document.getElementById("schoolSupp").value;
+
+    if(type !== ""){
+        if(type === req.type){
+            flag = flag & true;
+        }else {
+            flag = false;
+        }
+    }
+
+    return flag;
+}
+function filterToys(req){
+    var flag = true;
+    var age = document.getElementById("toysAge").value;
+    var gender = document.getElementById("toysGender").value;
+    var type = document.getElementById("toysType").value;
+
+    if(age !== ""){
+        if(age === req.age){
+            flag = flag & true;
+        }else{
+            flag = false;
+        }
+    }
+    if(gender !== ""){
+        if(gender === req.gender){
+            flag = flag & true;
+        } else{
+            flag = false;
+        }
+    }
+    if(type !== ""){
+        if(type === req.type){
+            flag = flag & true;
+        }else {
+            flag = false;
+        }
+    }
+
+    return flag;
+}
+function filterMedicalSupp(req){
+    var flag = true;
+    var type = document.getElementById("medicalType").value;
+
+    if(type !== ""){
+        if(type === req.deviceType){
+            flag = flag & true;
+        }else {
+            flag = false;
+        }
+    }
+
+    return flag;
+}
+function filterFood(req){
+    var flag = true;
+    var type = document.getElementById("foodType").value;
+
+    if(type !== ""){
+        if(type === req.type){
+            flag = flag & true;
+        }else {
+            flag = false;
+        }
+    }
+
+    return flag;
+}
 
 
 function changeDiv(){
@@ -445,17 +672,16 @@ function changeDiv(){
     const allDivs = ["clothes", "toys", "food", "medical supplies", "school supplies", "blood donations"];
             
     for(var i =0; i<allDivs.length;i++){
-        document.getElementById(allDivs[i]).classList.add("hide");
+        document.getElementById(allDivs[i]).classList.add("hidden");
     }
-
-    document.getElementById(val).classList.remove("hide");
+    if(val !== "")
+        document.getElementById(val).classList.remove("hidden");
 }
+function resetAllOptions(){
+    var x = document.getElementsByClassName("searchItem");
 
-
-
-
-function getPosts(){
-
-
+    for(var i = 0; i<x.length;i++){
+        (x[i].children)[1].value = "";
+    }
 
 }
