@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="assets/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+  
+
+<body onload="orgAccOnload()">
 
 <body>
-
   <!-- ======================header started====================== -->
 
   <header>
@@ -52,52 +54,69 @@
     </div>
   </section>
 
-  <!-- ====================== Pending Posts Section started====================== -->
+  <section class="bg-02">
+    <div class="container">
+      <div class="row" id="orgsBox">
+        <div class="col-12">
+          <div class="heading">
+            <h2>Posts</h2>
+            <div class = "options">
+              <h1 class="accBtn" onclick="showPndPosts()">Pending Posts</h1>
+              <h1 class="accBtn" onclick="showChPosts()">Chosen Posts</h1>
+              <h1 class="accBtn" onclick="showFFPosts()">Fulfilled Posts</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="bg-04">
+  <!-- ====================== Pending Posts Section started====================== -->
+  <div id="pndDiv">
+  <section class="bg-02">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="heading">
-            <h2>Pending Posts</h2>
-            <p>Check out pending posts</p>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="orgsBox">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="pnpost1">
-          <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>How To Donate</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                </ol>
+                <hr>
                 <p id="pndt1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore.
                 </p>
+                <hr>
                 <button onclick="deletePost('pnpost1')">Delete post</button>
                 <textarea type="text" id="pntxt1" name="post-text" placeholder="Update Post"></textarea>
                 <button onclick="updatePost('pntxt1','pndt1')">Update post</button>
+                <ol>
+                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
+                </ol>
               </div>
             </div>
-          </article>
         </div>
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="pnpost2">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Become A Volounteer</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                </ol>
+                <hr>
                 <p id="pndt2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore.
                 </p>
+                <hr>
                 <button onclick="deletePost('pnpost2')">Delete post</button>
                 <textarea type="text" id="pntxt2" name="post-text" placeholder="Update Post"></textarea>
                 <button onclick="updatePost('pntxt2','pndt2')">Update post</button>
+                <ol>
+                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
+                </ol>
               </div>
             </div>
           </article>
@@ -105,18 +124,20 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="pnpost3">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                </ol>
+                <hr>
                 <p id="pndt3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore.
                 </p>
+                <hr>
                 <button onclick="deletePost('pnpost3')">Delete post</button>
                 <textarea type="text" id="pntxt3" name="post-text" placeholder="Update Post"></textarea>
                 <button onclick="updatePost('pntxt3','pndt3')">Update post</button>
+                <ol>
+                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
+                </ol>
               </div>
             </div>
           </article>
@@ -124,18 +145,20 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="pnpost4">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                </ol>
+                <hr>
                 <p id="pndt4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore.
                 </p>
+                <hr>
                 <button onclick="deletePost('pnpost4')">Delete post</button>
                 <textarea type="text" id="pntxt4" name="post-text" placeholder="Update Post"></textarea>
                 <button onclick="updatePost('pntxt4','pndt4')">Update post</button>
+                <ol>
+                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
+                </ol>
               </div>
             </div>
           </article>
@@ -143,18 +166,20 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="pnpost5">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                </ol>
+                <hr>
                 <p id="pndt5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore.
                 </p>
+                <hr>
                 <button onclick="deletePost('pnpost5')">Delete post</button>
                 <textarea type="text" id="pntxt5" name="post-text" placeholder="Update Post"></textarea>
                 <button onclick="updatePost('pntxt5','pndt5')">Update post</button>
+                <ol>
+                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
+                </ol>
               </div>
             </div>
           </article>
@@ -162,48 +187,55 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="pnpost6">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                </ol>
+                <hr>
                 <p id="pndt6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore.
                 </p>
+                <hr>
                 <button onclick="deletePost('pnpost6')">Delete post</button>
                 <textarea type="text" id="pntxt6" name="post-text" placeholder="Update Post"></textarea>
                 <button onclick="updatePost('pntxt6','pndt6')">Update post</button>
+                <ol>
+                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
+                </ol>
               </div>
             </div>
           </article>
         </div>
-      </div>
     </div>
   </section>
-
+  </div>
   <!-- ====================== Chosen Posts Section started====================== -->
-
-  <section class="bg-04">
+  <div id="chDiv">
+  <section class="bg-02">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="heading">
-            <h2>Chosen Posts</h2>
-            <p>Check out the posts that have been chosen by donors</p>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="orgsBox">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="chpost1">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Medical</h3>
+                <hr>
+                <p id="chdt1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore.
+                </p>
+                <hr>
+                <button onclick="deletePost('chpost1')">Delete post</button>
+                <textarea type="text" id="chtxt1" name="post-text" placeholder="Update Post"></textarea>
+                <button onclick="updatePost('chtxt1','chdt1')">Update post</button>
                 <ol>
                   <li><span>by</span>admin<span class="_mn_cd_xs">jan 21, 2024</span></li>
                   <li><button class="collapsible">View donor details</button>
-                    <div class="content">
+                    <div class="collapse"  id="collapse">
                       <p><ol>
                         <li>Name: Omar Mostafa</li>
                         <li>Email: Omar.mostafa@guc.edu.eg</li>
@@ -214,12 +246,6 @@
                     </div>
                   </li>
                 </ol>
-                <p id="chdt1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                </p>
-                <button onclick="deletePost('chpost1')">Delete post</button>
-                <textarea type="text" id="chtxt1" name="post-text" placeholder="Update Post"></textarea>
-                <button onclick="updatePost('chtxt1','chdt1')">Update post</button>
               </div>
             </div>
           </article>
@@ -227,24 +253,26 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="chpost2">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Become A Volounteer</h3>
+                <hr>
+                <p id="chdt2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore.
+                </p>
+                <hr>
+                <button onclick="deletePost('chpost2')">Delete post</button>
+                <textarea type="text" id="chtxt2" name="post-text" placeholder="Update Post"></textarea>
+                <button onclick="updatePost('chtxt2','chdt2')">Update post</button>
                 <ol>
                   <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
                   <li><button class="collapsible">View donor details</button>
-                    <div class="content">
+                    <div class="collapse" id="collapse">
                       <p>This is the hidden content that will be shown when the button is clicked.</p>
                       <a href="contactDonor.html">Contact Donor</a>
                     </div>
                   </li>
                 </ol>
-                <p id="chdt2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                </p>
-                <button onclick="deletePost('chpost2')">Delete post</button>
-                <textarea type="text" id="chtxt2" name="post-text" placeholder="Update Post"></textarea>
-                <button onclick="updatePost('chtxt2','chdt2')">Update post</button>
               </div>
             </div>
           </article>
@@ -252,99 +280,26 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="chpost3">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                  <li><button class="collapsible">View donor details</button>
-                    <div class="content">
-                      <p>This is the hidden content that will be shown when the button is clicked.</p>
-                      <a href="contactDonor.html">Contact Donor</a>
-                    </div>
-                  </li>
-                </ol>
+                <hr>
                 <p id="chdt3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore.
                 </p>
+                <hr>
                 <button onclick="deletePost('chpost3')">Delete post</button>
                 <textarea type="text" id="chtxt3" name="post-text" placeholder="Update Post"></textarea>
                 <button onclick="updatePost('chtxt3','chdt3')">Update post</button>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="chpost4">
-          <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
-                <h3>Partnering to create a community</h3>
                 <ol>
                   <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
                   <li><button class="collapsible">View donor details</button>
-                    <div class="content">
+                    <div class="collapse" id="collapse">
                       <p>This is the hidden content that will be shown when the button is clicked.</p>
                       <a href="contactDonor.html">Contact Donor</a>
                     </div>
                   </li>
                 </ol>
-                <p id="chdt4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                </p>
-                <button onclick="deletePost('chpost4')">Delete post</button>
-                <textarea type="text" id="chtxt4" name="post-text" placeholder="Update Post"></textarea>
-                <button onclick="updatePost('chtxt4','chdt4')">Update post</button>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="chpost5">
-          <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
-                <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                  <li><button class="collapsible">View donor details</button>
-                    <div class="content">
-                      <p>This is the hidden content that will be shown when the button is clicked.</p>
-                      <a href="contactDonor.html">Contact Donor</a>
-                    </div>
-                  </li>
-                </ol>
-                <p id="chdt5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                </p>
-                <button onclick="deletePost('chpost5')">Delete post</button>
-                <textarea type="text" id="chtxt5" name="post-text" placeholder="Update Post"></textarea>
-                <button onclick="updatePost('chtxt5','chdt5')">Update post</button>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="chpost6">
-          <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
-                <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                  <li><button class="collapsible">View donor details</button>
-                    <div class="content">
-                      <p>This is the hidden content that will be shown when the button is clicked.</p>
-                      <a href="contactDonor.html">Contact Donor</a>
-                    </div>
-                  </li>
-                </ol>
-                <p id="chdt6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                </p>
-                <button onclick="deletePost('chpost6')">Delete post</button>
-                <textarea type="text" id="chtxt6" name="post-text" placeholder="Update Post"></textarea>
-                <button onclick="updatePost('chtxt6','chdt6')">Update post</button>
               </div>
             </div>
           </article>
@@ -352,37 +307,37 @@
       </div>
     </div>
   </section>
-
+  </div>
   <!-- ====================== Fulfilled Posts Section started====================== -->
-
-  <section class="bg-04">
+  <div id="ffDiv">
+  <section class="bg-02">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="heading">
-            <h2>Fulfilled Posts</h2>
-            <p>Check out posts that have been fulfilled</p>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="orgsBox">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="ffpost1">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>How To Donate</h3>
+                <hr>
+                <p>Donations: school backpack, 2 books, a pack of pencils and new clothes.
+                </p>
+                <hr>
+                <button onclick="deletePost('ffpost1')">Delete post</button>
                 <ol>
                   <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
                   <li><button class="collapsible">View donor details</button>
-                    <div class="content">
-                      <p>This is the hidden content that will be shown when the button is clicked.</p>
+                    <div class="collapse" id="collapse">
+                      <p>This is the hidden collapse that will be shown when the button is clicked.</p>
                       <a href="acknDonor.html">Contact Donor</a>
                     </div>
                   </li>
                 </ol>
-                <p>Donations: school backpack, 2 books, a pack of pencils and new clothes.
-                  <button onclick="deletePost('ffpost1')">Delete post</button>
-                </p>
               </div>
             </div>
           </article>
@@ -390,22 +345,24 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="ffpost2">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Become A Volounteer</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore.
+                </p>
+                <hr>
+                <button onclick="deletePost('ffpost2')">Delete post</button>
                 <ol>
                   <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
                   <li><button class="collapsible">View donor details</button>
-                    <div class="content">
+                    <div class="collapse" id="collapse">
                       <p>This is the hidden content that will be shown when the button is clicked.</p>
                       <a href="acknDonor.html">Contact Donor</a>
                     </div>
                   </li>
                 </ol>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                  <button onclick="deletePost('ffpost2')">Delete post</button>
-                </p>
               </div>
             </div>
           </article>
@@ -413,22 +370,24 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="ffpost3">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Partnering to create a community</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore.
+                </p>
+                <hr>
+                <button onclick="deletePost('ffpost3')">Delete post</button>
                 <ol>
                   <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
                   <li><button class="collapsible">View donor details</button>
-                    <div class="content">
+                    <div class="collapse" id="collapse">
                       <p>This is the hidden content that will be shown when the button is clicked.</p>
                       <a href="acknDonor.html">Contact Donor</a>
                     </div>
                   </li>
                 </ol>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                  <button onclick="deletePost('ffpost3')">Delete post</button>
-                </p>
               </div>
             </div>
           </article>
@@ -436,68 +395,24 @@
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="ffpost4">
           <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
+            <div class="featured-box">
+              <div class="content">
                 <h3>Partnering to create a community</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore.
+                </p>
+                <hr>
+                <button onclick="deletePost('ffpost4')">Delete post</button>
                 <ol>
                   <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
                   <li><button class="collapsible">View donor details</button>
-                    <div class="content">
+                    <div class="collapse" id="collapse">
                       <p>This is the hidden content that will be shown when the button is clicked.</p>
                       <a href="acknDonor.html">Contact Donor</a>
                     </div>
                   </li>
                 </ol>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                  <button onclick="deletePost('ffpost4')">Delete post</button>
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="ffpost5">
-          <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
-                <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                  <li><button class="collapsible">View donor details</button>
-                    <div class="content">
-                      <p>This is the hidden content that will be shown when the button is clicked.</p>
-                      <a href="acknDonor.html">Contact Donor</a>
-                    </div>
-                  </li>
-                </ol>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                  <button onclick="deletePost('ffpost5')">Delete post</button>
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="ffpost6">
-          <article class="_lk_bg_sd_we">
-            <div class="_xs_we_er">
-              <div class="_he_w">
-                <h3>Partnering to create a community</h3>
-                <ol>
-                  <li><span>by</span> admin<span class="_mn_cd_xs">june 30, 2020</span></li>
-                  <li><button class="collapsible">View donor details</button>
-                    <div class="content">
-                      <p>This is the hidden content that will be shown when the button is clicked.</p>
-                      <a href="acknDonor.html">Contact Donor</a>
-                    </div>
-                  </li>
-                </ol>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore.
-                  <button onclick="deletePost('ffpost6')">Delete post</button>
-                </p>
               </div>
             </div>
           </article>
@@ -505,203 +420,11 @@
       </div>
     </div>
   </section>
+  </div>
 
-  <section class="bg-03">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-          <div class="_lk_bg_cd">
-            <i class="fal fa-school"></i>
-            <div class="counting" data-count="128">128</div>
-            <h5>Primary Schools</h5>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-          <div class="_lk_bg_cd">
-            <i class="fal fa-hospitals"></i>
-            <div class="counting" data-count="300">300</div>
-            <h5>Hospitals</h5>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-          <div class="_lk_bg_cd">
-            <i class="fal fa-hands-helping"></i>
-            <div class="counting" data-count="250">250</div>
-            <h5>Volunteers</h5>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-          <div class="_lk_bg_cd">
-            <i class="fal fa-trophy"></i>
-            <div class="counting" data-count="400">400</div>
-            <h5>Winning Awards</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== Team Started started====================== -->
-
-  <section class="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="heading">
-            <h2>OUR TEAM</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam quo, ducimus aliquid quisquam
-              minima perspiciatis repellendus, minus tenetur reiciendis quis? Consequatur perferendis deleniti, rerum
-              delectus consectetur modi praesentium deserunt.</p>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div class="team-card">
-                <div class="image-team">
-                  <img src="assets/images/team/1.jpg">
-                </div>
-                <div class="team-content">
-                  <h3>John</h3>
-                  <p>Web Developer</p>
-                  <ol>
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-instagram"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                    <li><i class="fab fa-pinterest-p"></i></li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div class="team-card">
-                <div class="image-team">
-                  <img src="assets/images/team/2.jpg">
-                </div>
-                <div class="team-content">
-                  <h3>Anderson john</h3>
-                  <p>Web Designer</p>
-                  <ol>
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-instagram"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                    <li><i class="fab fa-pinterest-p"></i></li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"">
-              <div class=" team-card">
-              <div class="image-team">
-                <img src="assets/images/team/3.jpg">
-              </div>
-              <div class="team-content">
-                <h3>Sarah Se</h3>
-                <p>Web Designer</p>
-                <ol>
-                  <li><i class="fab fa-facebook-f"></i></li>
-                  <li><i class="fab fa-instagram"></i></li>
-                  <li><i class="fab fa-linkedin-in"></i></li>
-                  <li><i class="fab fa-pinterest-p"></i></li>
-                </ol>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"">
-              <div class=" team-card">
-            <div class="image-team">
-              <img src="assets/images/team/4.jpg">
-            </div>
-            <div class="team-content">
-              <h3>Williams</h3>
-              <p>English </p>
-              <ol>
-                <li><i class="fab fa-facebook-f"></i></li>
-                <li><i class="fab fa-instagram"></i></li>
-                <li><i class="fab fa-linkedin-in"></i></li>
-                <li><i class="fab fa-pinterest-p"></i></li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- ====================== Footer Section started====================== -->
+  
 
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>SMART GROUP</h3>
-            <p>ipsum dolor sit amet, Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Quick Links</h3>
-            <ol>
-              <li><i class="far fa-angle-right"></i>home</li>
-              <li><i class="far fa-angle-right"></i>About Us</li>
-              <li><i class="far fa-angle-right"></i>Services</li>
-              <li><i class="far fa-angle-right"></i>Blog</li>
-              <li class="last"><i class="far fa-angle-right"></i>Contact Us</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Services</h3>
-            <ol>
-              <li><i class="far fa-angle-right"></i>Raise fund for healthy food</li>
-              <li><i class="far fa-angle-right"></i>Education for poor children</li>
-              <li><i class="far fa-angle-right"></i>Promoting the rights of children</li>
-              <li><i class="far fa-angle-right"></i>Massive donation to poor</li>
-              <li class="last"><i class="far fa-angle-right"></i>Huge help to homeless pupil</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Contact Us</h3>
-            <form class="my-form">
-              <div class="form-group">
-                <input class="form-control" type="emal" name="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <textarea rows="3" placeholder="Message" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                <a href="#">Submit</a>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <div class="copy-right">
-            <p>© 2020 All Rights Reserved by<a href="https://www.smarteyeapps.com/">SmartEye</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
 </body>
 

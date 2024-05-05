@@ -59,3 +59,79 @@ for (var i = 0; i < coll.length; i++) {
     }
   });
 }
+
+//var col = document.getElementsByClassName("collapse");
+
+function showPndPosts() {
+  document.getElementById("pndDiv").classList.remove("hidden");
+  document.getElementById("chDiv").classList.add("hidden");
+  document.getElementById("ffDiv").classList.add("hidden");
+}
+
+function showChPosts() {
+  document.getElementById("chDiv").classList.remove("hidden");
+  var col = document.getElementById("chDiv").getElementsByClassName("collapse");
+  document.getElementById("pndDiv").classList.add("hidden");
+  document.getElementById("ffDiv").classList.add("hidden");
+  for(var i = 0; i<col.length; i++){
+    col[i].classList.add("hidden");
+  }
+}
+
+function showFFPosts() {
+  document.getElementById("ffDiv").classList.remove("hidden");
+  var col = document.getElementById("ffDiv").getElementsByClassName("collapse");
+  document.getElementById("pndDiv").classList.add("hidden");
+  document.getElementById("chDiv").classList.add("hidden");
+  for(var i = 0; i<col.length; i++){
+    col[i].classList.add("hidden");
+  }
+}
+
+
+function orgAccOnload(){
+  document.getElementById("pndDiv").classList.add("hidden");
+  document.getElementById("chDiv").classList.add("hidden");
+  document.getElementById("ffDiv").classList.add("hidden");
+  for(var i = 0; i<col.length; i++){
+    col[i].classList.add("hidden");
+  }
+}
+
+var dropdown = document.getElementById("category");
+var dropdown2 = document.getElementById("book-content");
+var contentContainer = document.getElementById("divs-container");
+var bookContainer = document.getElementById("book-content");
+
+dropdown.addEventListener("change", function() {
+
+  var selectedValue = dropdown.value;
+  var sValue = dropdown2.value;
+
+  var contentDivs = document.getElementsByClassName("content");
+  for (var i = 0; i < contentDivs.length; i++) {
+    contentDivs[i].style.display = "none";
+  }
+
+  var selectedContent = document.getElementById(selectedValue + "-content");
+  var selectedBook = document.getElementById(sValue + "-content");
+  if (selectedContent) {
+    selectedContent.style.display = "block";
+  }
+});
+
+dropdown2.addEventListener("change", function() {
+
+  var sValue = dropdown2.value;
+
+  var contentDivs = document.getElementsByClassName("book-class");
+  if(sValue === "book"){
+    contentDivs[0].style.display = "block";
+  }else {
+    contentDivs[0].style.display = "none";
+  }
+  //var selectedBook = document.getElementById(sValue + "-content");
+  //if (selectedBook) {
+  //  selectedBook.style.display = "block";
+//}
+});

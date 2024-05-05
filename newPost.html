@@ -60,8 +60,8 @@
               <div class="row">
                   <div class="col-12">
                       <div class="heading">
-                          <h2 style="color:#fff;">Submit new post</h2>
-                          <p style="color:#fff;"></p>
+                          <h2>Submit new post</h2>
+                          <p></p>
                       </div>
                   </div>
               </div>
@@ -71,30 +71,138 @@
                   <div class="col-lg-6 col-12">
                     <div class="form-group">
                       <label for="name">Choose a category:</label> 
-                      <select name="category" id="category">
-                          <option value="choose category">choose category</option> 
-                          <option value="clothes">clothes</option> 
-                          <option value="toys">toys</option> 
-                          <option value="food">food</option> 
-                          <option value="medical supplies">medical supplies</option>
-                          <option value="school supplies">school supplies</option>
-                          <option value="blood donations">blood donations</option> 
+                      <select name="category" id="category" class="form-control _ge_de_ol">
+                          <option value="" selected disabled>Please select</option>
+                          <option value="blood" style="color: black;">Blood donations</option> 
+                          <option value="clothes" style="color: black;">Clothes</option>
+                          <option value="school" style="color: black;">School supplies</option>
+                          <option value="toys" style="color: black;">Toys</option> 
+                          <option value="food" style="color: black;">Food</option> 
+                          <option value="medical" style="color: black;">Medical supplies</option> 
                       </select>
-                    
+                      
+                      <div id="divs-container" class="form-group">
+                        <div id="blood-content" class="content" style="display: none;">
+                          <ol>
+                            <li><label>Patient Name:</label> <input type="text" placeholder="Enter patient name" class="form-control _ge_de_ol"></li>
+                            <li><label>Patient Age:</label> <input type="text" placeholder="Enter patient age" class="form-control _ge_de_ol"></li>
+                            <li><label>Blood Type:</label> 
+                              <select class="form-control _ge_de_ol">
+                                <option value="" selected disabled>Please select</option>
+                                <option style="color: black;">A+</option>
+                                <option style="color: black;">A-</option>
+                                <option style="color: black;">B+</option>
+                                <option style="color: black;">B-</option>
+                                <option style="color: black;">AB</option>
+                                <option style="color: black;">O+</option>
+                                <option style="color: black;">O-</option>
+                              </select>
+                            </li>
+                            <li><label>Hospital Name:</label> <input type="text" placeholder="Enter hospital name" class="form-control _ge_de_ol"></li>
+                            <li><label>Hospital Area:</label> <input type="text" placeholder="Enter hospital area" class="form-control _ge_de_ol"></li>
+                            <li><label>Hospital Governorate:</label> <input type="text" placeholder="Enter hospital governorate" class="form-control _ge_de_ol"></li>
+                          </ol>
+                        </div>
+                        <div id="clothes-content" class="content" style="display: none;">
+                          <ol>
+                            <li><label>Type:</label> <input type="text" placeholder="Enter clothes type" class="form-control _ge_de_ol"></li>
+                            <li><label>Age:</label> <input type="number" placeholder="Enter age" class="form-control _ge_de_ol"></li>
+                            <li><label>Gender:</label> 
+                              <select data-placeholder="Enter gender" class="form-control _ge_de_ol">
+                                <option value="" selected disabled>Please select</option>
+                                <option style="color: black;">Male</option>
+                                <option style="color: black;">Female</option>
+                              </select>
+                            </li>
+                            <li><label>Season:</label> 
+                              <select data-placeholder="Enter season of the year" class="form-control _ge_de_ol">
+                                <option value="" selected disabled>Please select</option>
+                                <option style="color: black;">Summer</option>
+                                <option style="color: black;">Autumn</option>
+                                <option style="color: black;">Winter</option>
+                                <option style="color: black;">Spring</option>
+                              </select>
+                            </li>
+                            <li><label>Material:</label> <input type="text" placeholder="Enter material" class="form-control _ge_de_ol"></li>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ol>
+                        </div>
+                        <div id="school-content" class="content" style="display: none;">
+                          <ol>
+                            <li><label>Type:</label>
+                              <select id="book-content" class="form-control _ge_de_ol">
+                                <option value="" selected disabled>Please select</option>
+                                <option style="color: black;" value="book">Book</option>
+                                <option style="color: black;" value="Stationary">Stationary</option>
+                              </select>
+                            </li>
+                            <div  class="book-class hidden">
+                              <li><label>Book Name:</label> <input type="text" placeholder="Enter book name" class="form-control _ge_de_ol"></li>
+                              <li><label>Author:</label> <input type="text" placeholder="Enter author name" class="form-control _ge_de_ol"></li>
+                              <li><label>Book language:</label> <input type="text" placeholder="Enter language" class="form-control _ge_de_ol"></li>
+                              <li><label>Book edition:</label> <input type="number" placeholder="Enter book edition" class="form-control _ge_de_ol"></li>
+                              <li><label>Book Summary:</label> <input type="text" placeholder="Short summary" class="form-control _ge_de_ol"></li>
+                              <li><label>Book picture:</label> <input type="file" class="form-control _ge_de_ol"></li>
+                            </div>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ol>
+                        </div>
+                        <div id="toys-content" class="content" style="display: none;">
+                          <ol>
+                            <li><label>Type:</label> 
+                              <select class="form-control _ge_de_ol" data-placeholder="Enter season of the year">
+                                <option style="color: black;">Board games</option>
+                                <option style="color: black;">Stuffed toys</option>
+                                <option style="color: black;">Dolls</option>
+                                <option style="color: black;">Sports</option>
+                                <option style="color: black;">Cars</option>
+                                <option style="color: black;">Outdoor</option>
+                              </select>
+                            </li>
+                            <li><label>Age:</label> <input type="number" placeholder="Enter age" class="form-control _ge_de_ol"></li>
+                            <li><label>Gender:</label> 
+                              <select class="form-control _ge_de_ol" data-placeholder="Enter gender">
+                                <option style="color: black;">Male</option>
+                                <option style="color: black;">Female</option>
+                              </select>
+                            </li>
+                            <li><label>Category:</label> 
+                              <select class="form-control _ge_de_ol"  data-placeholder="Enter season of the year">
+                                <option style="color: black;">Board games</option>
+                                <option style="color: black;">Stuffed toys</option>
+                                <option style="color: black;">Dolls</option>
+                                <option style="color: black;">Sports</option>
+                                <option style="color: black;">Cars</option>
+                                <option style="color: black;">Outdoor</option>
+                              </select>
+                            </li>
+                            <li><label>Picture:</label> <input type="file" placeholder="Upload picture" class="form-control _ge_de_ol"></li>
+                          </ol>
+                        </div>
+                        <div id="food-content" class="content" style="display: none;">
+                          <ol>
+                            <li><label>Name:</label> <input type="text" placeholder="Enter food name" class="form-control _ge_de_ol"></li>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ol>
+                        </div>
+                        <div id="medical-content" class="content" style="display: none;">
+                          <ol>
+                            <li><label>Type:</label> <input type="text" placeholder="Enter type" class="form-control _ge_de_ol"></li>
+                            <li><label>Use:</label> <input type="text" placeholder="Enter use" class="form-control _ge_de_ol"></li>
+                            <li><label>Image:</label> <input type="file" class="form-control _ge_de_ol"></li>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ol>
+                        </div>
+                      </div>
                   
                     </div>
                 </div>
 
-                  <div class="col-12">
-                      <div class="form-group">
-                          <label for="message">Details <small>*</small></label>
-                          <textarea id="message" name="message" class="form-control required" rows="5"
-                              placeholder="Enter Message" aria-required="true"></textarea>
-                      </div>
-                  </div>
               </div>
-              <div class="form-group">
-                <a class="submit-but" href="newPost.html" onclick="addPost()">Submit</a>
+              <div class="col-lg-2 col-6">
+                <div class="form-group">
+                  <button onclick="window.location.href = 'newPost.html'">Submit</button>
+                </div>
               </div>
           </div>
       </section>
@@ -105,70 +213,6 @@
 
 
   <!-- ====================== Footer Section started====================== -->
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>SMART GROUP</h3>
-            <p>ipsum dolor sit amet, Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Quick Links</h3>
-            <ol>
-              <li><i class="far fa-angle-right"></i>Home</li>
-              <li><i class="far fa-angle-right"></i>About Us</li>
-              <li><i class="far fa-angle-right"></i>Services</li>
-              <li><i class="far fa-angle-right"></i>Blog</li>
-              <li class="last"><i class="far fa-angle-right"></i>Contact Us</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Services</h3>
-            <ol>
-              <li><i class="far fa-angle-right"></i>Raise fund for healthy food</li>
-              <li><i class="far fa-angle-right"></i>Education for poor children</li>
-              <li><i class="far fa-angle-right"></i>Promoting the rights of children</li>
-              <li><i class="far fa-angle-right"></i>Massive donation to poor</li>
-              <li class="last"><i class="far fa-angle-right"></i>Huge help to homeless pupil</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Contact Us</h3>
-            <form class="my-form">
-              <div class="form-group">
-                <input class="form-control" type="emal" name="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <textarea rows="3" placeholder="Message" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                <a href="#">Submit</a>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <div class="copy-right">
-            <p>© 2020 All Rights Reserved by<a href="https://www.smarteyeapps.com/">SmartEye</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
 </body>
 
