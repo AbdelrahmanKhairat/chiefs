@@ -22,7 +22,6 @@
         </div>
 
         <div class="row">
-
             <div class="col-lg-6 col-12">
                 <div class="form-group">
                     <label for="clinic-name">Clinic Name:</label> 
@@ -48,27 +47,27 @@
                     <label for="pro-bono-cases">Pro-bono Cases:</label> 
                     <input type="number" id="pro-bono-cases" placeholder="Enter pro-bono cases capacity" class="form-control">
                 </div>
-                div class="col-lg-2 col-6">
+
+                <div class="form-group">
+                    <label for="Location">Location:</label>
+                    <div id="map" style="height: 400px;"></div>
+                </div>               
                 <div class="form-group">
                   <button onclick="window.location.href = 'donor-profile.html'">Submit</button>
                 </div>
+                    
               </div>
           </div>
-
-
-
-
-            <div class="col-lg-6 col-12">
-                <!-- Map container -->
-                <div id="clinic-map" style="height: 400px;"></div>
-            </div>
-
+        </div>
         </div>
     </div>
 </section>
-<section class="mab-01">
-    <iframe style="width:100%"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d249759.19784092825!2d79.10145254589841!3d12.009924873581818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1448883859107"
-        height="450" frameborder="0" allowfullscreen=""></iframe>
-</section> 
+<script src="assets/js/Posts.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js" async defer></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
 
+</html>
