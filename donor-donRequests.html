@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Charity</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body>
+
+    <!-- ======================header started====================== -->
+    <header>
+        <div class="my-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="nav-items">
+                        <div class="menu-toggle"></div>
+                        <div class="logo">
+                            <img src="assets/images/logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <section class="bg-02-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="_head_01">
+                        <h2>Donor</h2>
+                        <p>Home<i class="fas fa-angle-right"></i>Dashboard<i
+                                class="fas fa-angle-right"></i><span>Requests</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-02">
+        <div class="container">
+            <div class="row" id="requestBox">
+
+                <div class="col-12">
+                    <div class="heading">
+                        <h2>Requests</h2>
+                        
+                        <div class="search">
+                            <input type="text" id="searchDonorRequest" placeholder="Search...">
+                            <button onclick="searchRequests()">Search</button>
+                        </div>
+                        
+                        <div class="search">
+                            <form id="form1" onchange="changeDiv()">
+                                <div class = "searchItem col-3">
+                                    <label for="Categories">Categories</label>
+                                    <select id="category">
+                                        <option value="" disabled selected>Please Select</option>
+                                        <option value="blood donations">blood donations</option>
+                                        <option value="clothes">clothes</option>
+                                        <option value="school supplies">school supplies</option>
+                                        <option value="toys">toys</option>
+                                        <option value="food">food</option>
+                                        <option value="medical supplies">medical supplies</option> 
+                                    </select>
+                                </div>
+                                
+                            </form>
+                        </div>
+
+                        <div class="search">
+                            <form>
+                                <div id="blood donations" class="hidden">   
+                                    <div class="searchItem col-3">
+                                        <Label>Age</Label>
+                                        <select id="bloodDonAge">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="infant">0-1</option>
+                                            <option value="toddler">2-4</option>
+                                            <option value="child">5-12</option>
+                                            <option value="teen">13-19</option>
+                                            <option value="adult">20-39</option>
+                                            <option value="middle aged">40-59</option>
+                                            <option value="senior">60+</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label>Gender</Label>
+                                        <select id="bloodDonGender">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label>blood type</Label>
+                                        <select id="bloodDonType">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                        </select>>
+                                    </div> 
+                                </div>
+                                <div id="clothes" class="hidden">
+                                    <div class="searchItem col-3">
+                                        <Label>Age</Label>
+                                        <select id="clothesAge">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="infant">0-1</option>
+                                            <option value="toddler">2-4</option>
+                                            <option value="child">5-12</option>
+                                            <option value="teen">13-19</option>
+                                            <option value="adult">20-39</option>
+                                            <option value="middle aged">40-59</option>
+                                            <option value="Senior">60+</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label>Gender</Label>
+                                        <select id="clothesGender">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label>Season</Label>
+                                        <select id="season">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Winter">Winter</option>
+                                            <option value="Summer">Summer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="school supplies" class="hidden">
+                                    <div class="searchItem col-3">
+                                        <Label>Type</Label>
+                                        <select id="schoolSupp">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Books">Books</option>
+                                            <option value="Stationary">Stationary</option>
+                                        </select>
+                                    </div>
+                                    
+            
+                                </div>
+                                <div id="toys" class="hidden">
+
+                                    <div class="searchItem col-3">
+                                        <Label>Age</Label>
+                                        <select id="toysAge">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="infant">0-1</option>
+                                            <option value="toddler">2-4</option>
+                                            <option value="child">5-12</option>
+                                            <option value="teen">13-19</option>
+                                            <option value="adult">20-39</option>
+                                            <option value="middle aged">40-59</option>
+                                            <option value="Senior">60+</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="searchItem col-3">
+                                        <Label>Gender</Label>
+                                        <select id="toysGender">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="searchItem col-3">
+                                        <Label for="type">type</Label>
+                                        <select id="toysType">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="stuffed toys">stuffed toys</option>
+                                            <option value="dolls">dolls</option>
+                                            <option value="sports">sports</option>
+                                            <option value="cars">cars</option>
+                                            <option value="outdoor">outdoor</option>
+                                            <option value="board games">board games</option>
+                                        </select>
+                                    </div> 
+                                </div>
+                                <div id="medical supplies" class="hidden">
+                                    <div class="searchItem col-3">
+                                        <Label>Type</Label>
+                                        <select id="medicalType">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="medical devices">medical devices</option>
+                                            <option value="medical equipment">medical equipment</option>
+                                            <option value="medication">medication</option>
+                                        </select>
+                                    </div>
+
+                                    
+            
+                                </div>            
+                                <div id="food" class="hidden">
+
+                                    <div class="searchItem col-3">
+                                        <Label>Type</Label>
+                                        <select id="foodType">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="fruits">fruits</option>
+                                            <option value="vegetables">vegetables</option>
+                                            <option value="baked food">baked food</option>
+                                            <option value="canned food">canned food</option>
+                                            <option value="fresh food">fresh food</option>
+                                        </select>
+    
+                                    </div>
+                                                
+                                </div>     
+                            </form>
+                            <button onclick="filterRequests()">Filter</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== section started====================== -->
+
+    <script src="assets/js/donor-script.js"></script>
+
+</body>
+
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
