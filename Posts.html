@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Charity</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+    <body>
+    <body>
+
+    <!-- ======================header started====================== -->
+    <header>
+        <div class="my-nav">
+          <div class="container">
+            <div class="row">
+              <div class="nav-items">
+                <div class="menu-toggle"></div>
+                <div class="logo">
+                  <img src="assets/images/logo.png">
+                </div>
+                <div class="menu-items">
+                  <div class="menu">
+                    <ul>
+                      <li><a href="donor-profile.html">Home</a></li>
+                      <li><a href="Posts.html">Posts</a></li>
+                      <li><a href="donor-donRequests.html">View Requests</a></li>
+                      <li><a href="Volunteer-Role.html">volunteer</a></li>
+                      <li><a href="donor-account.html">My Account</a></li>
+                      <li><a href="main.html">Log out</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <section class="bg-02-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="_head_01">
+                        <h2>Donor</h2>
+                        <p>Home<i class="fas fa-angle-right"></i>Dashboard<i
+                                class="fas fa-angle-right"></i><span>Posts</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-02">
+        <div class="container">
+            <div class="row" id="PostsBox">
+
+                <div class="col-12">
+                    <div class="heading">
+                        <h2>Posts</h2>
+                        
+                        <div class="search">
+                            <form id="form1" onchange="changeDivPosts2()">
+                                <div class = "searchItem col-3">
+                                    <label>Categories</label>
+                                    <select id="category" class="select">
+                                        <option value="" disabled selected>Please Select</option>
+                                        <option value="Teaching">Teaching</option>
+                                        <option value="Medical">Medical</option>
+                                    </select>
+                                </div>  
+                                
+                            </form>
+                        </div>
+
+                        <div class="search">
+                            <form>
+                                <div id="Teaching" class="hidden">   
+                                    <div class="searchItem col-3">
+                                        <Label>Subject</Label>
+                                        <select id="subject">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="English">English</option>
+                                            <option value="History">History</option>
+                                            <option value="Math">Math</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label>Area</Label>
+                                        <select id="Area-Teaching">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Area1">Area 1</option>
+                                            <option value="Area2">Area 2</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="searchItem col-3">
+                                        <Label>Governorate</Label>
+                                        <select id="Governorate-Teaching">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Cairo">Cairo</option>
+                                            <option value="Giza">Giza</option>
+                                            <option value="Alex">Alexandria</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="Medical" class="hidden">
+                                    <div class="searchItem col-3">
+                                        <Label>Specialty</Label>
+                                        <select id="Specialty">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Medicine">Internal Medicine</option>
+                                            <option value="Ped">Pediatrics</option>
+                                            <option value="Neur">Neurology</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label>Name</Label>
+                                        <select id="OrgName">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="resla">Resala</option>
+                                            <option value="masr">Misr EL Kheir</option>
+                                        </select>
+                                    </div>
+                                     <div class="searchItem col-3">
+                                        <Label>Area</Label>
+                                        <select id="AreaMedical">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Area 1">Area 1</option>
+                                            <option value="Area 2">Area 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="searchItem col-3">
+                                        <Label>Governorate</Label>
+                                        <select id="GovernorateMedical">
+                                            <option value="" disabled selected>Please Select</option>
+                                            <option value="Cairo">Cairo</option>
+                                            <option value="Gov1">Gov1</option>
+                                            <option value="Alex">Alexandria</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                    
+                            </form>
+
+                            <div class = "options">
+                                <h1 onclick="filterPosts()">Filter</h1>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== section started====================== -->
+    <script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js" async defer></script>
+  
+    <script src="assets/js/Posts.js"></script>
+
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+
+</html>

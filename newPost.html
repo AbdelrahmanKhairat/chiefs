@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Charity</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>initMap()</script>
+</head>
+
+<body>
+
+  <!-- ======================header started====================== -->
+
+  <header>
+    <div class="my-nav">
+      <div class="container">
+        <div class="row">
+          <div class="nav-items">
+            <div class="menu-toggle"></div>
+            <div class="logo">
+              <img src="assets/images/logo.png">
+            </div>
+            <div class="menu-items">
+              <div class="menu">
+                <ul>
+                  <li><a href="organizationDashboard.html">Home</a></li>
+                  <li><a href="newPost.html">New Post</a></li>
+                  <li><a href="organizationPosts.html">View posts</a></li>
+                  <li><a href="orgAcc.html">My Account</a></li>
+                  <li><a href="main.html">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-02-a">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="_head_01">
+                      <h2>Organisation</h2>
+                      <p>Home<i class="fas fa-angle-right"></i>Dashboard<i class="fas fa-angle-right"></i><span>New Post</span></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+      
+      <!-- ====================== Form started====================== -->
+
+      <section class="my-pla">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="heading">
+                          <h2>Submit new post</h2>
+                          <p></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+
+                  <div class="col-lg-6 col-12">
+                    <div class="form-group">
+                      <label for="name">Choose a category:</label> 
+                      <select name="category" id="category" class="form-control _ge_de_ol">
+                          <option value="" selected disabled hidden>Please select</option>
+                          <option value="blood" style="color: black;">Blood donations</option> 
+                          <option value="clothes" style="color: black;">Clothes</option>
+                          <option value="school" style="color: black;">School supplies</option>
+                          <option value="toys" style="color: black;">Toys</option> 
+                          <option value="food" style="color: black;">Food</option> 
+                          <option value="medical" style="color: black;">Medical supplies</option>
+                          <option value="teaching" style="color: black;">Teaching</option>
+                          <option value="doctor" style="color: black;">Medical</option>
+                      </select>
+                      
+                      <div id="divs-container" class="form-group">
+                        <div id="blood-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Patient Name:</label> <input type="text" placeholder="Enter patient name" class="form-control _ge_de_ol"></li>
+                            <li>
+                              <Label>Age:</Label>
+                              <select id="bloodDonAge" class="form-control _ge_de_ol">
+                                  <option value="" disabled selected hidden>Please Select</option>
+                                  <option value="infant" style="color: black;">0-1</option>
+                                  <option value="toddler" style="color: black;">2-4</option>
+                                  <option value="child" style="color: black;">5-12</option>
+                                  <option value="teen" style="color: black;">13-19</option>
+                                  <option value="adult" style="color: black;">20-39</option>
+                                  <option value="middle aged" style="color: black;">40-59</option>
+                                  <option value="senior" style="color: black;">60+</option>
+                              </select>
+                            </li>
+                            <li><label>Blood type:</label> 
+                              <select class="form-control _ge_de_ol">
+                                <option value="" selected disabled hidden>Please select</option>
+                                <option style="color: black;">A+</option>
+                                <option style="color: black;">A-</option>
+                                <option style="color: black;">B+</option>
+                                <option style="color: black;">B-</option>
+                                <option style="color: black;">AB+</option>
+                                <option style="color: black;">AB-</option>
+                                <option style="color: black;">O+</option>
+                                <option style="color: black;">O-</option>
+                              </select>
+                            </li>
+                            <li><label>Hospital Name:</label> <input type="text" placeholder="Enter hospital name" class="form-control _ge_de_ol"></li>
+                            <li><label>Hospital Area:</label> <input type="text" placeholder="Enter hospital area" class="form-control _ge_de_ol"></li>
+                            <li><label>Hospital Governorate:</label> <input type="text" placeholder="Enter hospital governorate" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                        <div id="clothes-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Type:</label> <input type="text" placeholder="Enter clothes type" class="form-control _ge_de_ol"></li>
+                            <li><label>Age:</label> <input type="number" placeholder="Enter age" class="form-control _ge_de_ol"></li>
+                            <li><label>Gender:</label> 
+                              <select data-placeholder="Enter gender" class="form-control _ge_de_ol">
+                                <option value="" selected disabled hidden>Please select</option>
+                                <option style="color: black;">Male</option>
+                                <option style="color: black;">Female</option>
+                              </select>
+                            </li>
+                            <li><label>Season:</label> 
+                              <select data-placeholder="Enter season of the year" class="form-control _ge_de_ol">
+                                <option value="" selected disabled hidden>Please select</option>
+                                <option style="color: black;">Summer</option>
+                                <option style="color: black;">Autumn</option>
+                                <option style="color: black;">Winter</option>
+                                <option style="color: black;">Spring</option>
+                              </select>
+                            </li>
+                            <li><label>Material:</label> <input type="text" placeholder="Enter material" class="form-control _ge_de_ol"></li>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                        <div id="school-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Type:</label>
+                              <select id="book-content" class="form-control _ge_de_ol">
+                                <option value="" selected disabled hidden>Please select</option>
+                                <option style="color: black;" value="book">Book</option>
+                                <option style="color: black;" value="Stationary">Stationary</option>
+                              </select>
+                            </li>
+                            <div  class="book-class hidden">
+                              <li><label>Book Name:</label> <input type="text" placeholder="Enter book name" class="form-control _ge_de_ol"></li>
+                              <li><label>Author:</label> <input type="text" placeholder="Enter author name" class="form-control _ge_de_ol"></li>
+                              <li><label>Book language:</label> <input type="text" placeholder="Enter language" class="form-control _ge_de_ol"></li>
+                              <li><label>Book edition:</label> <input type="number" placeholder="Enter book edition" class="form-control _ge_de_ol"></li>
+                              <li><label>Book Summary:</label> <input type="text" placeholder="Short summary" class="form-control _ge_de_ol"></li>
+                              <li><label>Book picture:</label> <input type="file" class="form-control _ge_de_ol"></li>
+                            </div>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                        <div id="toys-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Type:</label> 
+                              <select class="form-control _ge_de_ol" >
+                                <option value="" selected disabled hidden>Please select</option>
+                                <option style="color: black;">Board games</option>
+                                <option style="color: black;">Stuffed toys</option>
+                                <option style="color: black;">Dolls</option>
+                                <option style="color: black;">Sports</option>
+                                <option style="color: black;">Cars</option>
+                                <option style="color: black;">Outdoor</option>
+                              </select>
+                            </li>
+                            <li><label>Age:</label> <input type="number" placeholder="Enter age" class="form-control _ge_de_ol"></li>
+                            <li><label>Gender:</label> 
+                              <select class="form-control _ge_de_ol" data-placeholder="Enter gender">
+                                <option style="color: black;">Male</option>
+                                <option style="color: black;">Female</option>
+                              </select>
+                            </li>
+                            <li><label>Category:</label> 
+                              <select class="form-control _ge_de_ol"  data-placeholder="Enter season of the year">
+                                <option value="" selected disabled hidden>Please select</option>
+                                <option style="color: black;">Board games</option>
+                                <option style="color: black;">Stuffed toys</option>
+                                <option style="color: black;">Dolls</option>
+                                <option style="color: black;">Sports</option>
+                                <option style="color: black;">Cars</option>
+                                <option style="color: black;">Outdoor</option>
+                              </select>
+                            </li>
+                            <li><label>Picture:</label> <input type="file" placeholder="Upload picture" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                        <div id="food-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Name:</label> <input type="text" placeholder="Enter food name" class="form-control _ge_de_ol"></li>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                        <div id="medical-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Type:</label> <input type="text" placeholder="Enter type" class="form-control _ge_de_ol"></li>
+                            <li><label>Use:</label> <input type="text" placeholder="Enter use" class="form-control _ge_de_ol"></li>
+                            <li><label>Image:</label> <input type="file" class="form-control _ge_de_ol"></li>
+                            <li><label>Quantity:</label> <input type="number" placeholder="Enter quantity" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                        <div id="teaching-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Number of students:</label> <input type="number" placeholder="Enter number of students" class="form-control _ge_de_ol"></li>
+                            <li><label>Address:</label> <input type="text" placeholder="Enter address" class="form-control _ge_de_ol"></li>
+                            <li><label>Map location:</label><div id="map"></div></li>
+                            <li><label>Subjects:</label> <input type="text" placeholder="Enter subjects" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                        <div id="doctor-content" class="content" style="display: none;">
+                          <ul>
+                            <li><label>Patient name:</label> <input type="text" placeholder="Enter patient name" class="form-control _ge_de_ol"></li>
+                            <li><label>Age:</label> <input type="number" placeholder="Enter patient age" class="form-control _ge_de_ol"></li>
+                            <li><label>Gender:</label> 
+                              <select data-placeholder="Enter gender" class="form-control _ge_de_ol">
+                                <option value="" selected disabled hidden>Please select</option>
+                                <option style="color: black;">Male</option>
+                                <option style="color: black;">Female</option>
+                              </select>
+                            </li>
+                            <li><label>Weight:</label> <input type="number" placeholder="Enter patient weight" class="form-control _ge_de_ol"></li>
+                            <li><label>Map location:</label><div id="map"></div></li>
+                            <li><label>Address:</label> <input type="text" placeholder="Enter patient address" class="form-control _ge_de_ol"></li>
+                            <li><label>Organization name:</label> <input type="text" placeholder="Enter organiztion name" class="form-control _ge_de_ol"></li>
+                            <li><label>Medical speciality:</label> <input type="text" placeholder="Enter medical speciality" class="form-control _ge_de_ol"></li>
+                            <li><label>Case description:</label> <input type="text" placeholder="Enter case description" class="form-control _ge_de_ol"></li>
+                          </ul>
+                        </div>
+                      </div>
+                  
+                    </div>
+                </div>
+
+              </div>
+              <div class="col-lg-2 col-6">
+                <div class="form-group">
+                  <button onclick="window.location.href = 'newPost.html'">Submit</button>
+                </div>
+              </div>
+          </div>
+          
+      </section>
+
+  <!-- ====================== Footer Section started====================== -->
+
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js" async defer></script>
+
+</html>

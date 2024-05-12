@@ -45,13 +45,14 @@ a:hover {
 
 /* ================================ Header CSS =============================== */
 .my-nav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   padding: 10px 0px;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999; }
+  z-index: 999;
+   }
   .my-nav .nav-items {
     display: flex;
     flex-wrap: wrap;
@@ -275,7 +276,7 @@ a:hover {
 .bg-02 {
   padding: 50px 0px;
   position: relative;
-  background: #fff;
+  background: #9E9FA5;
   z-index: 9; }
   .bg-02 .featured-box {
     position: relative;
@@ -287,26 +288,87 @@ a:hover {
       position: relative;
       padding: 10px 20px;
       position: relative;
-      border: 1px solid #dddd;
-      border-top: 0px;
+      border: 1px solid #8b0000;
+      background: transparent;
       border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px; }
+      border-bottom-right-radius: 6px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px; }
       .bg-02 .featured-box .content h3 {
         font-size: 20px;
-        color: #222222; }
+        color: #000;
+        align-self: center;
+        text-align: center;}
+      .bg-02 .featured-box .content h2 {
+        font-size: 16px;
+        color: #000;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 10px;}
       .bg-02 .featured-box .content p {
-        padding: 10px 0px;
-        color: #373738;
+        padding: 0px 0px;
+        color: #000;
         font-size: 14px;
-        font-weight: 500; }
-      .bg-02 .featured-box .content ol li {
+        font-weight: 500;
+        margin-top: 10px; }
+      .bg-02 .featured-box .content hr {
+        color: #000; }
+      .bg-02 .featured-box .content .mapDiv {
+        padding: 10px 0px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        width: 100%;
+        height: 250px; }
+      .bg-02 .featured-box .content .btnDiv{
+        margin-top: 7px;
         display: inline-block;
-        padding: 0 6px 0 0;
-        border-right: 1px solid #dddd;
-        color: #373738;
-        font-size: 13px; }
+        text-align: center;
+        width: 100%; }
+        .bg-02 .featured-box .content .btn{ 
+          width:30%;  
+          background-color: transparent;
+          padding: 5px ;
+          border-radius: 8px;
+          border-color: #000;
+          color: #000;
+          border-style: solid;
+          border-width: 1px;
+          margin: 10px;
+          font-size: 16px;
+          font-weight: 600; }
+        .bg-02 .featured-box .content .btn:hover{
+          background-color: #000;
+          color: #ddd; }
+        .bg-02 .featured-box .content ol li {
+        display: inline-block;
+        padding: 0 5px 0 5px;
+        margin-top: 5px;
+        border-right: 1px solid #000;
+        color: #000;
+        font-size: 13px;}
         .bg-02 .featured-box .content ol li:nth-child(3) {
           border: none; }
+          .bg-02 .featured-box .content input{
+            background-color: transparent;
+            border: #8b0000 solid 1px;
+            border-radius: 10px;
+            color: #000;
+            padding-left: 7px;
+            margin-right: 5px; }
+          .bg-02 .featured-box .content button{
+            background-color: transparent;
+            padding-left: 5px ;
+            padding-right: 5px ;
+            border-radius: 8px;
+            border-color: #000;
+            color: #000;
+            border-style: solid;
+            border-width: 1px;}
+          .bg-02 .featured-box .content button:hover{
+            background-color: #000;
+            color: #ddd; }
     .bg-02 .featured-box .feature-card {
       position: relative;
       border-top-right-radius: 6px;
@@ -490,10 +552,11 @@ a:hover {
   z-index: 99; }
   .heading h2 {
     font-size: 25px;
-    color: #002147;
+    color: #8b0000;
     font-weight: 800;
     letter-spacing: 0.4px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 10px; }
   .heading p {
     font-size: 16px;
     letter-spacing: 0.4px;
@@ -502,6 +565,143 @@ a:hover {
     font-weight: 400;
     line-height: 27px;
     text-transform: capitalize; }
+  .heading hr{
+    border-color: #8b0000; /* Change the color of the horizontal rule */
+    margin: 30px 0; }
+    .heading .options h1{
+      font-size: 20px;
+      text-align: center;
+      align-self: center;
+      font-weight: 800;
+      width: 250px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: #8b0000;
+      display: inline-block;
+      margin: 5px 15px 0px 15px;
+      padding: 5px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #8b0000;
+      border-radius: 8px;
+      background-color: transparent;
+      cursor: pointer;}
+    .heading .options h1:hover{
+    color: #ddd;
+    background-color: #8b0000; }
+  .heading .search {
+    letter-spacing: 0.4px;
+    color: #373738;
+    margin: 10px 0px; }
+    .heading .search input {
+        width: 30%;
+        padding: 12px 24px;
+
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid #8b0000;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        
+        &::placeholder {
+            color: color(#8b0000 a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        &:hover,
+        &:focus {
+            padding: 12px 0;
+            outline: 0;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #8b0000;
+            border-radius: 0;
+            background-position: 100% center;
+        }
+      /*color: #222222;    
+      border-color: #8b0000;
+      border-width: 1px;
+      border-style: solid;
+      
+      padding-left: 10px;
+      margin: 10px 0px;
+      border-top-left-radius: 16px; 
+      border-top-right-radius: 16px; 
+      border-bottom-left-radius: 16px; 
+      border-bottom-right-radius: 16px;*/ }
+    .heading .search button {
+      font-size: 20px;
+      width: 75px;
+      text-align: center;
+      font-size: 16px;
+      color: #ddd;
+      border-color: #8b0000;
+      background-color: transparent;
+      font-weight: 400;
+      line-height: 27px;
+      text-transform: capitalize;
+      /*border-top-left-radius: 5px; 
+      border-top-right-radius: 5px; 
+      border-bottom-left-radius: 5px; 
+      border-bottom-right-radius: 5px; */}
+    .heading .search button:hover  {
+      background-color: rgba(0, 33, 71, 0.9);
+      color: #dddd}
+    .heading .search label{
+      float: left;
+      width:50%;
+      font-size: 14px;
+      font-weight: 600;
+      color: #8b0000;
+      background-color: transparent;
+      padding: 5px; }
+    .heading .search select{
+      float: right;
+      width:50%;
+      font-size: 14px;
+      font-weight: 600;
+      color: #8b0000;
+      background-color: transparent; 
+      border-style: none;
+      padding: 5px; }     
+    .heading .search .searchItem{
+      font-size: 20px;
+      text-align: center;
+      background-color: transparent;
+      border-color: #8b0000;
+      border-width: 1px;
+      border-style: solid;
+      /*font-size: 14px;*/
+      font-weight: 600;
+      margin: 10px;
+      padding-top: 10px;
+      display: inline-block;
+      border-top-left-radius: 16px; 
+      border-top-right-radius: 16px; 
+      border-bottom-left-radius: 16px; 
+      border-bottom-right-radius: 16px;}
+    .heading .search .searchItem:hover{
+      background-color: #8b0000;
+      color: #ddd;}
+      .heading .search .searchItem:hover select{
+        color: #ddd;
+        border-style: solid;
+        border-color: #ddd;}
+      .heading .search .searchItem:hover label{
+        color: #ddd;}
+      .heading .search .searchItem:hover option{
+      color: #000;}
+
 
 .bg-02-a {
   padding: 150px 0px 80px 0px;
@@ -624,6 +824,22 @@ a:hover {
       min-height: 45px;
       border-radius: 4px;
       margin: 10px 0px; }
+      .my-pla .form-group .form-control option {
+        color: #000;  
+      }
+    .my-pla .form-group button{
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      min-height: 45px;
+      border-radius: 4px;
+      margin: 10px 0px;
+      width: 100%;
+       }
+    .my-pla .form-group button:hover {
+      color: #000;
+      background: #fff; }
+
 
 /* ================================ Footer CSS =============================== */
 footer {
@@ -685,3 +901,39 @@ footer {
         padding-left: 15px; }
 
 /*# sourceMappingURL=style.css.map */
+
+.hidden{
+  display: none;
+}
+
+.colldiv {
+  align-content: stretch;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  z-index: 99999;
+}
+
+.editRow{
+  display: flex;
+  justify-content: space-between;
+  height: 40 px;
+}
+.editRow i{
+  padding: 0px;
+  margin-top:10px;
+  float: right;
+}
+.editRow p{
+  padding: 0px;
+  margin-top:0px;
+  float: left;
+}
+.editRow p button{
+  
+  margin-left:3px;
+  float: right;
+}
+

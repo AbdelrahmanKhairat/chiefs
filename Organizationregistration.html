@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Charity</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ======================header started====================== -->
+    <header>
+        <div class="my-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="nav-items">
+                        <div class="menu-toggle"></div>
+                        <div class="logo">
+                            <img src="assets/images/logo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-02-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="_head_01">
+                        <h2>Organisation</h2>
+                        <p>Home<i class="fas fa-angle-right"></i><span>Registration</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-pla">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading">
+                        <h2 style="color:#fff;">Organisation Registration</h2>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>First Name <small>*</small></label>
+                        <input id="fName" class="form-control _ge_de_ol" type="text"
+                            placeholder="Enter first name" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Last Name <small>*</small></label>
+                        <input id="lName" class="form-control _ge_de_ol" type="text"
+                            placeholder="Enter last name" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Gender <small>*</small></label>
+                        <select id = "gender" class="form-control _ge_de_ol">
+                            <option value="" disabled selected>please select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Email <small>*</small></label>
+                        <input id="email" class="form-control _ge_de_ol" type="email"
+                            placeholder="Enter email" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Password <small>*</small></label>
+                        <input id="password" class="form-control _ge_de_ol" type="password"
+                            placeholder="Enter password" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Contact Number <small>*</small></label>
+                        <input id="number" class="form-control _ge_de_ol" type="number"
+                            placeholder="Enter contact number" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Organisation Name<small>*</small></label>
+                        <input id="orgName" class="form-control _ge_de_ol" type="text"
+                            placeholder="Enter Organisation name" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Organisation Type<small>*</small></label>
+                        <select id = "orgType" class="form-control _ge_de_ol">
+                            <option value="" disabled selected>please select</option>
+                            <option value="school">school</option>
+                            <option value="hospital">hospital</option>
+                            <option value="mosque">mosque</option>
+                            <option value="church">church</option>
+                            <option value="non-profit">non-profit</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Organisation Address<small>*</small></label>
+                        <input id="address" class="form-control _ge_de_ol" type="text"
+                            placeholder="Enter Organisation address" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Organisation Area <small>*</small></label>
+                        <input id="area" class="form-control _ge_de_ol" type="text"
+                            placeholder="Enter Organisation area" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label>Organisation governorate <small>*</small></label>
+                        <input id="gov" class="form-control _ge_de_ol" type="text"
+                            placeholder="Enter Organisation governorate" required="" aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+              <div class="form-group">
+                  <button onclick ="registerOrganisation()">Register</button>
+              </div>
+            </div>
+    
+                
+        </div>
+    </section>
+
+</body>
+
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/Registeration-script.js"></script>
+</html>
