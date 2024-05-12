@@ -27,9 +27,10 @@
               <div class="menu">
                 <ul>
                   <li><a href="organizationDashboard.html">Home</a></li>
-                    <li><a href="newPost.html">New Post</a></li>
-                    <li><a href="organizationPosts.html">View Post</a></li>
-                    <li><a href="index.html">Log Out</a></li>
+                  <li><a href="newPost.html">New Post</a></li>
+                  <li><a href="organizationPosts.html">View posts</a></li>
+                  <li><a href="orgAcc.html">My Account</a></li>
+                  <li><a href="index.html">Log out</a></li>
                 </ul>
               </div>
             </div>
@@ -44,8 +45,8 @@
           <div class="row">
               <div class="col-12">
                   <div class="_head_01">
-                      <h2>Contact Donor</h2>
-                      <p>Home<i class="fas fa-angle-right"></i><span>Contact Donor</span></p>
+                      <h2>Organisation</h2>
+                      <p>Home<i class="fas fa-angle-right"></i>Dashboard<i class="fas fa-angle-right"></i><span>Contact Donor</span></p>
                   </div>
               </div>
           </div>
@@ -76,86 +77,54 @@
                       </div>
                   </div>
               </div>
+              
+              <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                      <label for="name">Choose time slot:</label> 
+                      <select name="time-slot" id="time-slot" class="form-control _ge_de_ol">
+                        <option value="" selected disabled hidden>Time Slot</option>
+                        <option value="9:00 AM - 10:00 AM">9:00 AM - 11:00 AM</option>
+                        <option value="10:00 AM - 11:00 AM">11:00 AM - 02:00 PM</option>
+                        <option value="11:00 AM - 12:00 PM">02:00 PM - 05:00 PM</option>
+                        <option value="11:00 AM - 12:00 PM">05:00 PM - 08:00 PM</option>
+                        <option value="11:00 AM - 12:00 PM">08:00 PM - 12:00 AM</option>
+                      </select>
+                    </div>
+                </div>
+              </div>
+
+              
           </div>
       </section>
 
       <!-- ====================== Map started====================== -->
 
-      <section class="mab-01">
-          <iframe style="width:100%"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d249759.19784092825!2d79.10145254589841!3d12.009924873581818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1448883859107"
-              height="450" frameborder="0" allowfullscreen=""></iframe>
-              <div class="form-group">
-                <a class="submit-but" href="organizationDashboard.html" onclick="addPost()">Send</a>
-              </div>
+      <section class="my-pla">
+        <div class="row">
+          <div class = col-2></div>
+          <div class="col-8">
+            <section class="mab-01">
+              <div id="map"></div>
+            </section>
+          </div>
+      </section>
+      </div>
+      <section class="my-pla">
+        <div class="container">
+          <div class="col-lg-2 col-6">
+            <div class="form-group">
+              <button onclick="window.location.href = 'organizationDashboard.html'">Send</button>
+            </div>
+          </div>
+        </div>
       </section>
 
 
   <!-- ====================== Footer Section started====================== -->
 
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>SMART GROUP</h3>
-            <p>ipsum dolor sit amet, Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Quick Links</h3>
-            <ol>
-              <li><i class="far fa-angle-right"></i>home</li>
-              <li><i class="far fa-angle-right"></i>About Us</li>
-              <li><i class="far fa-angle-right"></i>Services</li>
-              <li><i class="far fa-angle-right"></i>Blog</li>
-              <li class="last"><i class="far fa-angle-right"></i>Contact Us</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Services</h3>
-            <ol>
-              <li><i class="far fa-angle-right"></i>Raise fund for healthy food</li>
-              <li><i class="far fa-angle-right"></i>Education for poor children</li>
-              <li><i class="far fa-angle-right"></i>Promoting the rights of children</li>
-              <li><i class="far fa-angle-right"></i>Massive donation to poor</li>
-              <li class="last"><i class="far fa-angle-right"></i>Huge help to homeless pupil</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-          <div class="_kl_de_w">
-            <h3>Contact Us</h3>
-            <form class="my-form">
-              <div class="form-group">
-                <input class="form-control" type="emal" name="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <textarea rows="3" placeholder="Message" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                <a href="#">Submit</a>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <div class="copy-right">
-            <p>© 2020 All Rights Reserved by<a href="https://www.smarteyeapps.com/">SmartEye</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  
 
 </body>
 
@@ -163,5 +132,6 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js" async defer></script>
 
 </html>

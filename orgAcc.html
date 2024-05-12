@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Charity</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+  
+<body onload="orgMyAccOnload()">
+
+<body>
+  <!-- ======================header started====================== -->
+
+  <header>
+    <div class="my-nav">
+      <div class="container">
+        <div class="row">
+          <div class="nav-items">
+            <div class="menu-toggle"></div>
+            <div class="logo">
+              <img src="assets/images/logo.png">
+            </div>
+            <div class="menu-items">
+              <div class="menu">
+                <ul>
+                    <li><a href="organizationDashboard.html">Home</a></li>
+                    <li><a href="newPost.html">New Post</a></li>
+                    <li><a href="organizationPosts.html">View posts</a></li>
+                    <li><a href="orgAcc.html">My Account</a></li>
+                    <li><a href="main.html">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-02-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="_head_01">
+                    <h2>Admin</h2>
+                    <p>Home<i class="fas fa-angle-right"></i>Dashboard<i class="fas fa-angle-right"></i><span>Account</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="bg-02">
+    <div class="container">
+      <div class="row" id = "orgsBox">
+        
+        <div class="col-12">
+          <div class="heading">
+            <h2>My Account</h2>
+            <div class = "options">
+              <h1 class="accBtn" onclick="showSetLocDiv()">Set location</h1>
+              <h1 class="accBtn" onclick="showUploadDocsDiv()">Upload documents</h1>
+              <h1 class="accBtn" onclick="showUpdateDiv()">Update Credintials</h1>
+              <h1 class="accBtn" onclick="showViewDiv()">View Credintials</h1>
+              <h1 class="accBtn" onclick="deleteAcc()">Delete Account</h1>
+            </div>
+          </div>
+        </div>  
+        
+        
+
+      </div>
+    </div>
+  </section>
+
+  <section class="my-pla" id="SetLocDiv">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading">
+                    <h2 style="color:#fff;">Set Location</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <section class="mab-01">
+                  <div id="map"></div>
+                </section>
+            </div>
+            <div class="form-group">
+                    <button onclick="window.location.href = 'organizationDashboard.html'">Set location</button>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="my-pla" id="UploadDocsDiv">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading">
+                    <h2 style="color:#fff;">Upload Documents</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="form-group">
+                    <label for="name">Choose file:</label>
+                    <input type="file" id="usernameLbl"class="form-control _ge_de_ol"> 
+                    <div class="form-group">
+                      <button onclick="window.location.href = 'organizationDashboard.html'">Set location</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="my-pla" id="updateCredintials">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <div class="heading">
+                <h2 style="color:#fff;">Update Credintials</h2>
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>First Name <small>*</small></label>
+                    <input id="fName" class="form-control _ge_de_ol" type="text"
+                        placeholder="Enter first name" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Last Name <small>*</small></label>
+                    <input id="lName" class="form-control _ge_de_ol" type="text"
+                        placeholder="Enter last name" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Gender <small>*</small></label>
+                    <select id = "gender" class="form-control _ge_de_ol">
+                        <option value="" disabled selected>please select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Email <small>*</small></label>
+                    <input id="email" class="form-control _ge_de_ol" type="email"
+                        placeholder="Enter email" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Password <small>*</small></label>
+                    <input id="password" class="form-control _ge_de_ol" type="password"
+                        placeholder="Enter password" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Contact Number <small>*</small></label>
+                    <input id="number" class="form-control _ge_de_ol" type="number"
+                        placeholder="Enter contact number" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Organisation Name<small>*</small></label>
+                    <input id="orgName" class="form-control _ge_de_ol" type="text"
+                        placeholder="Enter Organisation name" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Organisation Type<small>*</small></label>
+                    <select id = "orgType" class="form-control _ge_de_ol">
+                        <option value="" disabled selected>please select</option>
+                        <option value="school">school</option>
+                        <option value="hospital">hospital</option>
+                        <option value="mosque">mosque</option>
+                        <option value="church">church</option>
+                        <option value="non-profit">non-profit</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Organisation Address<small>*</small></label>
+                    <input id="orgAddress" class="form-control _ge_de_ol" type="text"
+                        placeholder="Enter Organisation address" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Organisation Area <small>*</small></label>
+                    <input id="orgArea" class="form-control _ge_de_ol" type="text"
+                        placeholder="Enter Organisation area" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Organisation governorate <small>*</small></label>
+                    <input id="orgGov" class="form-control _ge_de_ol" type="text"
+                        placeholder="Enter Organisation governorate" required="" aria-required="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <div class="form-group">
+              <button id ="orgRegisterationBtn" onclick="updateAcc()">Update</button>
+          </div>
+        </div>
+
+            
+    </div>
+</section>
+
+
+  <section class="my-pla" id="viewCredintials">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading">
+                    <h2 style="color:#fff;">View Credintials</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>First Name <small>*</small></label>
+                    <label id="fNameLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+
+        
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Last Name <small>*</small></label>
+                    <label id="lNameLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+
+       
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Gender <small>*</small></label>
+                    
+                    <label id="genderLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+
+        
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Email <small>*</small></label>
+                    <label id="emailLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+
+        
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Password <small>*</small></label>
+                    
+                    <label id="passwordLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+
+        
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Contact Number <small>*</small></label>
+                    
+                    <label id="numberLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Organisation Name<small>*</small></label>
+                    
+                    <label id="orgNameLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Organisation Type<small>*</small></label>
+                    
+                    <label id="orgTypeLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Address<small>*</small></label>
+                    
+                    <label id="addressLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+
+        
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Area <small>*</small></label> 
+                    <label id="areaLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+      
+            <div class="col-6">
+                <div class="form-group">
+                    <label>governorate <small>*</small></label>
+                    
+                    <label id="govLbl" class="form-control _ge_de_ol"></label>
+                </div>
+            </div>
+        
+        </div>
+
+            
+    </div>
+  </section>
+  
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js" async defer></script>
+
+</html>
+
